@@ -1,0 +1,73 @@
+{
+	"protocol": {
+		"c2s": {
+			"login": {
+				"cmd": 1,
+				"request": {
+					"userId": ["string", 0],
+					"token": ["string", 1],
+					"platform": ["string", 2],
+					"token_old": ["string", 3],
+					"serverId": ["int", 4],
+					"lid": ["string", 5]
+				},
+				"response": {
+					"result": ["int", 0],
+					"code": ["boolean", 1],
+					"userId": ["int", 2],
+					"roleList": ["*roleList", 3],
+					"level": ["int", 4]
+				}
+			},
+			"query_roles": {
+				"cmd": 2,
+				"response": {
+					"code": ["boolean", 0],
+					"roleId": ["int", 1],
+					"roleList": ["roleList", 2],
+					"level": ["int", 4]
+				}
+			},
+			"enter_game": {
+				"cmd": 3,
+				"request": {
+					"roleId": ["int", 0]
+				},
+				"response": {
+					"result": ["int", 0],
+                    "QQ": ["string", 1]
+				}
+			},
+			"create_role": {
+				"cmd": 4,
+				"request": {
+					"name": ["string", 0],
+					"sex": ["int", 1],
+					"job": ["int", 2],
+					"icon": ["int", 3],
+					"pf": ["string", 4]
+				},
+				"response": {
+					"result": ["int", 0],
+					"id": ["int", 1],
+					"time": ["int", 2],
+					"name": ["string", 3]
+				}
+			}
+		},
+		"s2c": {
+		},
+		"struct": {
+			"role_list": {
+				"rd": ["int", 0],
+				"serverId": ["int", 1],
+				"name": ["string", 2],
+				"job": ["int", 3],
+				"sex": ["int", 4],
+				"level": ["int", 5],
+				"zhuansheng_lv": ["int", 6],
+				"totalpower": ["int", 7]	
+			}
+		}
+	}
+}

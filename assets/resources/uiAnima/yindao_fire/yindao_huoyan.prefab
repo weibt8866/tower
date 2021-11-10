@@ -1,0 +1,178 @@
+[
+  {
+    "__type__": "cc.Prefab",
+    "_name": "yindao_huoyan",
+    "data": {
+      "__id__": 1
+    }
+  },
+  {
+    "__type__": "cc.Node",
+    "_name": "yindao_huoyan",
+    "_children": [
+      {
+        "__id__": 2
+      }
+    ],
+    "_components": [
+      {
+        "__type__": "cc.Sprite",
+        "node": {
+          "__id__": 1
+        },
+        "_sizeMode": 2,
+        "_isTrimmedMode": false
+      },
+      {
+        "__type__": "cc.Animation",
+        "node": {
+          "__id__": 1
+        },
+        "_defaultClip": {
+          "__uuid__": "e2e55351-131b-4921-8f64-7da674fdda68"
+        },
+        "_clips": [
+          {
+            "__uuid__": "e2e55351-131b-4921-8f64-7da674fdda68"
+          }
+        ],
+        "playOnLoad": true
+      }
+    ],
+    "_prefab": {
+      "__type__": "cc.PrefabInfo",
+      "root": {
+        "__id__": 1
+      },
+      "asset": {
+        "__id__": 0
+      },
+      "fileId": "51poBkAAdPD4Opf3L5dzA9"
+    },
+    "_contentSize": {
+      "__type__": "cc.Size",
+      "width": 40,
+      "height": 40
+    },
+    "_trs": {
+      "__type__": "TypedArray",
+      "ctor": "Float64Array",
+      "array": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    "_zIndex": 0
+  },
+  {
+    "__type__": "cc.Node",
+    "_name": "New Particle",
+    "_parent": {
+      "__id__": 1
+    },
+    "_components": [
+      {
+        "__type__": "cc.ParticleSystem",
+        "node": {
+          "__id__": 2
+        },
+        "_dstBlendFactor": 1,
+        "_custom": {
+          "custom": false
+        },
+        "_file": {
+          "__uuid__": "08675105-8c8c-4a12-a983-88c59414efd2"
+        },
+        "_spriteFrame": {
+          "__uuid__": "beee5f7e-6a63-40f3-a36f-c85912ea4123"
+        },
+        "totalParticles": 350,
+        "emissionRate": 350,
+        "life": 0.3,
+        "lifeVar": 0.6,
+        "_startColor": {
+          "__type__": "cc.Color",
+          "r": 255,
+          "g": 171,
+          "a": 71
+        },
+        "_startColorVar": {
+          "__type__": "cc.Color",
+          "a": 98
+        },
+        "_endColor": {
+          "__type__": "cc.Color",
+          "r": 173,
+          "g": 161,
+          "b": 19,
+          "a": 65
+        },
+        "_endColorVar": {
+          "__type__": "cc.Color",
+          "a": 42
+        },
+        "angle": 360,
+        "angleVar": 360,
+        "startSize": 350,
+        "startSizeVar": 90,
+        "endSize": 360,
+        "endSizeVar": 90,
+        "startSpin": -90,
+        "startSpinVar": 90,
+        "endSpin": -90,
+        "endSpinVar": 90,
+        "posVar": {
+          "__type__": "cc.Vec2",
+          "x": 400,
+          "y": 150
+        },
+        "_positionType": 2,
+        "positionType": 2,
+        "gravity": {
+          "__type__": "cc.Vec2",
+          "x": 900,
+          "y": 900
+        },
+        "speed": 200,
+        "speedVar": 192,
+        "tangentialAccel": 300,
+        "tangentialAccelVar": 300
+      }
+    ],
+    "_prefab": {
+      "__type__": "cc.PrefabInfo",
+      "root": {
+        "__id__": 1
+      },
+      "asset": {
+        "__id__": 0
+      },
+      "fileId": "e3EJMqu25H0qjUdtMefW49"
+    },
+    "_trs": {
+      "__type__": "TypedArray",
+      "ctor": "Float64Array",
+      "array": [
+        -19,
+        -572,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    "_zIndex": 0
+  }
+]

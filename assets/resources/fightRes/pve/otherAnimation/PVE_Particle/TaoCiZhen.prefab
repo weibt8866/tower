@@ -1,0 +1,160 @@
+[
+  {
+    "__type__": "cc.Prefab",
+    "_name": "TaoCiZhen",
+    "data": {
+      "__id__": 1
+    }
+  },
+  {
+    "__type__": "cc.Node",
+    "_name": "TaoCiZhen",
+    "_children": [
+      {
+        "__id__": 2
+      }
+    ],
+    "_components": [
+      {
+        "__type__": "cc.Sprite",
+        "node": {
+          "__id__": 1
+        },
+        "_sizeMode": 2,
+        "_isTrimmedMode": false
+      }
+    ],
+    "_prefab": {
+      "__type__": "cc.PrefabInfo",
+      "root": {
+        "__id__": 1
+      },
+      "asset": {
+        "__id__": 0
+      },
+      "fileId": "83svKVDLBOr6Ux8rCPqGlq"
+    },
+    "_contentSize": {
+      "__type__": "cc.Size",
+      "width": 40,
+      "height": 40
+    },
+    "_trs": {
+      "__type__": "TypedArray",
+      "ctor": "Float64Array",
+      "array": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    "_zIndex": 0
+  },
+  {
+    "__type__": "cc.Node",
+    "_name": "TaoCiZhen",
+    "_parent": {
+      "__id__": 1
+    },
+    "_components": [
+      {
+        "__type__": "cc.ParticleSystem",
+        "node": {
+          "__id__": 2
+        },
+        "_custom": {
+          "custom": false
+        },
+        "_file": {
+          "__uuid__": "24fdff5f-8415-4742-b8e6-95bd7c1677dd"
+        },
+        "_spriteFrame": {
+          "__uuid__": "492c6b81-3846-41f1-980a-5c41c0e75858"
+        },
+        "totalParticles": 60,
+        "emissionRate": 15,
+        "life": 8,
+        "lifeVar": 15,
+        "_startColor": {
+          "__type__": "cc.Color",
+          "r": 255,
+          "g": 255,
+          "b": 255
+        },
+        "_startColorVar": {
+          "__type__": "cc.Color",
+          "a": 0
+        },
+        "_endColor": {
+          "__type__": "cc.Color",
+          "r": 255,
+          "g": 255,
+          "b": 255
+        },
+        "_endColorVar": {
+          "__type__": "cc.Color",
+          "a": 0
+        },
+        "angle": 360,
+        "angleVar": 360,
+        "startSize": 3,
+        "startSizeVar": 15,
+        "endSize": 15,
+        "endSizeVar": 3,
+        "startSpin": -140,
+        "startSpinVar": 140,
+        "endSpin": -140,
+        "endSpinVar": 140,
+        "posVar": {
+          "__type__": "cc.Vec2",
+          "x": 100,
+          "y": 700
+        },
+        "_positionType": 2,
+        "positionType": 2,
+        "gravity": {
+          "__type__": "cc.Vec2",
+          "x": 100,
+          "y": -20
+        },
+        "speed": -20,
+        "speedVar": 20,
+        "tangentialAccel": 10
+      }
+    ],
+    "_prefab": {
+      "__type__": "cc.PrefabInfo",
+      "root": {
+        "__id__": 1
+      },
+      "asset": {
+        "__id__": 0
+      },
+      "fileId": "48fG2qp11OL6an4sFEffHU"
+    },
+    "_trs": {
+      "__type__": "TypedArray",
+      "ctor": "Float64Array",
+      "array": [
+        -400,
+        -8,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    "_zIndex": 0
+  }
+]

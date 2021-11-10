@@ -1,0 +1,155 @@
+[
+  {
+    "__type__": "cc.Prefab",
+    "_name": "ShaMo",
+    "data": {
+      "__id__": 1
+    }
+  },
+  {
+    "__type__": "cc.Node",
+    "_name": "ShaMo",
+    "_children": [
+      {
+        "__id__": 2
+      }
+    ],
+    "_components": [
+      {
+        "__type__": "cc.Sprite",
+        "node": {
+          "__id__": 1
+        },
+        "_sizeMode": 2,
+        "_isTrimmedMode": false
+      }
+    ],
+    "_prefab": {
+      "__type__": "cc.PrefabInfo",
+      "root": {
+        "__id__": 1
+      },
+      "asset": {
+        "__id__": 0
+      },
+      "fileId": "8fy/fmiuJBgLDeAPlCCgxO"
+    },
+    "_contentSize": {
+      "__type__": "cc.Size",
+      "width": 40,
+      "height": 40
+    },
+    "_trs": {
+      "__type__": "TypedArray",
+      "ctor": "Float64Array",
+      "array": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    "_zIndex": 0
+  },
+  {
+    "__type__": "cc.Node",
+    "_name": "ShaMo",
+    "_parent": {
+      "__id__": 1
+    },
+    "_components": [
+      {
+        "__type__": "cc.ParticleSystem",
+        "node": {
+          "__id__": 2
+        },
+        "_custom": {
+          "custom": false
+        },
+        "_file": {
+          "__uuid__": "e59c6263-6eff-41c5-a125-04684e6191e1"
+        },
+        "_spriteFrame": {
+          "__uuid__": "986c4e26-dbcf-47f6-965d-d229877cb331"
+        },
+        "totalParticles": 15,
+        "life": 5,
+        "lifeVar": 4,
+        "_startColor": {
+          "__type__": "cc.Color",
+          "r": 255,
+          "g": 146,
+          "a": 50
+        },
+        "_startColorVar": {
+          "__type__": "cc.Color",
+          "a": 0
+        },
+        "_endColor": {
+          "__type__": "cc.Color",
+          "r": 255,
+          "g": 146,
+          "a": 100
+        },
+        "_endColorVar": {
+          "__type__": "cc.Color",
+          "a": 20
+        },
+        "angle": 360,
+        "angleVar": 360,
+        "startSize": 500,
+        "startSizeVar": 300,
+        "endSize": 200,
+        "endSizeVar": 10,
+        "endSpinVar": 140,
+        "posVar": {
+          "__type__": "cc.Vec2",
+          "x": 100,
+          "y": 700
+        },
+        "_positionType": 1,
+        "positionType": 1,
+        "gravity": {
+          "__type__": "cc.Vec2",
+          "x": 100
+        },
+        "speed": 30,
+        "speedVar": 0,
+        "tangentialAccel": 0
+      }
+    ],
+    "_prefab": {
+      "__type__": "cc.PrefabInfo",
+      "root": {
+        "__id__": 1
+      },
+      "asset": {
+        "__id__": 0
+      },
+      "fileId": "56zVd9JINDVayc7GjLkXPW"
+    },
+    "_trs": {
+      "__type__": "TypedArray",
+      "ctor": "Float64Array",
+      "array": [
+        -560,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    "_zIndex": 0
+  }
+]

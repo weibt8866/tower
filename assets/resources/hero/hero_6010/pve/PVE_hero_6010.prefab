@@ -1,0 +1,136 @@
+[
+  {
+    "__type__": "cc.Prefab",
+    "_name": "PVE_hero_6010",
+    "data": {
+      "__id__": 1
+    }
+  },
+  {
+    "__type__": "cc.Node",
+    "_name": "PVE_hero_6010",
+    "_children": [
+      {
+        "__id__": 2
+      }
+    ],
+    "_components": [
+      {
+        "__type__": "cc.Sprite",
+        "node": {
+          "__id__": 1
+        },
+        "_sizeMode": 2,
+        "_isTrimmedMode": false
+      },
+      {
+        "__type__": "cc.Animation",
+        "node": {
+          "__id__": 1
+        },
+        "_defaultClip": {
+          "__uuid__": "86b36fe6-1fcc-4fa4-8551-fd1731d1defe"
+        },
+        "_clips": [
+          {
+            "__uuid__": "86b36fe6-1fcc-4fa4-8551-fd1731d1defe"
+          },
+          {
+            "__uuid__": "62db9ec0-09ca-4c39-96f9-088998ec172a"
+          },
+          {
+            "__uuid__": "53896af8-1a36-487d-badb-0a1fd9ca6336"
+          },
+          {
+            "__uuid__": "8f1b9777-2538-4f5b-86a8-e9c459d97305"
+          },
+          {
+            "__uuid__": "1658c709-0f5d-4587-a3e5-3d3222f668ee"
+          }
+        ],
+        "playOnLoad": true
+      }
+    ],
+    "_prefab": {
+      "__type__": "cc.PrefabInfo",
+      "root": {
+        "__id__": 1
+      },
+      "asset": {
+        "__uuid__": "e1b6955e-d63c-457a-a621-5575c669d584"
+      },
+      "fileId": "7dKkGKu4JBpKPujrBpvKAj"
+    },
+    "_contentSize": {
+      "__type__": "cc.Size",
+      "width": 40,
+      "height": 40
+    },
+    "_trs": {
+      "__type__": "TypedArray",
+      "ctor": "Float64Array",
+      "array": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    "_zIndex": 0
+  },
+  {
+    "__type__": "cc.Node",
+    "_name": "PVE_hero_6010_1",
+    "_parent": {
+      "__id__": 1
+    },
+    "_components": [
+      {
+        "__type__": "cc.Sprite",
+        "node": {
+          "__id__": 2
+        },
+        "_sizeMode": 0,
+        "_isTrimmedMode": false
+      }
+    ],
+    "_prefab": {
+      "__type__": "cc.PrefabInfo",
+      "root": {
+        "__id__": 1
+      },
+      "asset": {
+        "__uuid__": "e1b6955e-d63c-457a-a621-5575c669d584"
+      },
+      "fileId": "1c2uP63EdGhoeSmewFdVcn"
+    },
+    "_contentSize": {
+      "__type__": "cc.Size",
+      "width": 800,
+      "height": 600
+    },
+    "_trs": {
+      "__type__": "TypedArray",
+      "ctor": "Float64Array",
+      "array": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    "_zIndex": 0
+  }
+]

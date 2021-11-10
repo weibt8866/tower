@@ -1,0 +1,101 @@
+[
+  {
+    "__type__": "cc.Prefab",
+    "_name": "YuanShen_Particle",
+    "data": {
+      "__id__": 1
+    }
+  },
+  {
+    "__type__": "cc.Node",
+    "_name": "YuanShen_Particle",
+    "_components": [
+      {
+        "__type__": "cc.ParticleSystem",
+        "node": {
+          "__id__": 1
+        },
+        "_dstBlendFactor": 1,
+        "_custom": {
+          "custom": false
+        },
+        "_file": {
+          "__uuid__": "848a7df6-ed52-4c15-aa09-d84c20808b89"
+        },
+        "_spriteFrame": {
+          "__uuid__": "472df5d3-35e7-4184-9e6c-7f41bee65ee3"
+        },
+        "totalParticles": 30,
+        "emissionRate": 50,
+        "life": 0.5,
+        "lifeVar": 1,
+        "_startColor": {
+          "__type__": "cc.Color",
+          "r": 255,
+          "g": 255,
+          "b": 255
+        },
+        "_startColorVar": {
+          "__type__": "cc.Color"
+        },
+        "_endColor": {
+          "__type__": "cc.Color",
+          "r": 255,
+          "g": 255,
+          "b": 255,
+          "a": 214
+        },
+        "_endColorVar": {
+          "__type__": "cc.Color",
+          "a": 119
+        },
+        "angle": 360,
+        "angleVar": 360,
+        "endSize": 30,
+        "endSizeVar": 20,
+        "posVar": {
+          "__type__": "cc.Vec2",
+          "x": 250,
+          "y": 80
+        },
+        "_positionType": 2,
+        "positionType": 2,
+        "gravity": {
+          "__type__": "cc.Vec2",
+          "y": 300
+        },
+        "speed": 15,
+        "speedVar": 20,
+        "tangentialAccel": 0,
+        "startRadius": 100
+      }
+    ],
+    "_prefab": {
+      "__type__": "cc.PrefabInfo",
+      "root": {
+        "__id__": 1
+      },
+      "asset": {
+        "__id__": 0
+      },
+      "fileId": "220zVBa3hEyZb2uIaHQ/uv"
+    },
+    "_trs": {
+      "__type__": "TypedArray",
+      "ctor": "Float64Array",
+      "array": [
+        0,
+        108,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    "_zIndex": 0
+  }
+]

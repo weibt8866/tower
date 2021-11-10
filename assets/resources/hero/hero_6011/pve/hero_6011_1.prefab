@@ -1,0 +1,123 @@
+[
+  {
+    "__type__": "cc.Prefab",
+    "_name": "hero_6011_1",
+    "data": {
+      "__id__": 1
+    }
+  },
+  {
+    "__type__": "cc.Node",
+    "_name": "hero_6011_1",
+    "_children": [
+      {
+        "__id__": 2
+      }
+    ],
+    "_components": [
+      {
+        "__type__": "cc.Animation",
+        "node": {
+          "__id__": 1
+        },
+        "_defaultClip": {
+          "__uuid__": "a60d2523-96be-415f-a31c-770df6460a8f"
+        },
+        "_clips": [
+          {
+            "__uuid__": "a60d2523-96be-415f-a31c-770df6460a8f"
+          },
+          {
+            "__uuid__": "93d52105-fdf9-436c-9159-77b2dae41137"
+          },
+          {
+            "__uuid__": "eba80fc6-d2d8-464b-87de-893029cd4cc8"
+          },
+          {
+            "__uuid__": "de4a6fd4-6d0c-4b9b-9b31-dfc7af040503"
+          },
+          {
+            "__uuid__": "aeb44a3e-286c-4be0-b501-739251b1a558"
+          }
+        ],
+        "playOnLoad": true
+      }
+    ],
+    "_prefab": {
+      "__type__": "cc.PrefabInfo",
+      "root": {
+        "__id__": 1
+      },
+      "asset": {
+        "__uuid__": "c2428443-88ca-46f2-a86b-cfa6b2fb772a"
+      },
+      "fileId": "c5WBZQSJVFq5a1FlLAms1F"
+    },
+    "_trs": {
+      "__type__": "TypedArray",
+      "ctor": "Float64Array",
+      "array": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    "_zIndex": 0
+  },
+  {
+    "__type__": "cc.Node",
+    "_name": "hero",
+    "_parent": {
+      "__id__": 1
+    },
+    "_components": [
+      {
+        "__type__": "cc.Sprite",
+        "node": {
+          "__id__": 2
+        },
+        "_sizeMode": 0,
+        "_isTrimmedMode": false
+      }
+    ],
+    "_prefab": {
+      "__type__": "cc.PrefabInfo",
+      "root": {
+        "__id__": 1
+      },
+      "asset": {
+        "__uuid__": "c2428443-88ca-46f2-a86b-cfa6b2fb772a"
+      },
+      "fileId": "d5PVq6Un9OMKSmVuYtrKa0"
+    },
+    "_contentSize": {
+      "__type__": "cc.Size",
+      "width": 800,
+      "height": 600
+    },
+    "_trs": {
+      "__type__": "TypedArray",
+      "ctor": "Float64Array",
+      "array": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    "_zIndex": 0
+  }
+]

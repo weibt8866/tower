@@ -1,0 +1,131 @@
+[
+  {
+    "__type__": "cc.Prefab",
+    "_name": "YEWAI_Particle",
+    "data": {
+      "__id__": 1
+    }
+  },
+  {
+    "__type__": "cc.Node",
+    "_name": "YEWAI_Particle",
+    "_components": [
+      {
+        "__type__": "cc.ParticleSystem",
+        "node": {
+          "__id__": 1
+        },
+        "_srcBlendFactor": 1,
+        "_dstBlendFactor": 1,
+        "_custom": {
+          "custom": false
+        },
+        "_file": {
+          "__uuid__": "0a3f3474-2899-4cb0-b315-265e5211d9f8"
+        },
+        "_spriteFrame": {
+          "__uuid__": "dfd293c1-b9b7-4641-9958-2aa3b59a958e"
+        },
+        "_stopped": false,
+        "totalParticles": 80,
+        "emissionRate": 100,
+        "life": 0.5,
+        "lifeVar": 1,
+        "_startColor": {
+          "__type__": "cc.Color",
+          "r": 255,
+          "g": 255,
+          "b": 255,
+          "a": 163
+        },
+        "_startColorVar": {
+          "__type__": "cc.Color",
+          "r": 229,
+          "g": 255,
+          "b": 173,
+          "a": 198
+        },
+        "_endColor": {
+          "__type__": "cc.Color",
+          "r": 255,
+          "g": 255,
+          "b": 255,
+          "a": 214
+        },
+        "_endColorVar": {
+          "__type__": "cc.Color",
+          "r": 255,
+          "g": 255,
+          "b": 255,
+          "a": 188
+        },
+        "angle": 0,
+        "angleVar": 360,
+        "startSize": 0,
+        "startSizeVar": 90,
+        "startSpin": -47.369998931884766,
+        "endSpin": -47.369998931884766,
+        "endSpinVar": -142.11000061035156,
+        "posVar": {
+          "__type__": "cc.Vec2",
+          "x": 500,
+          "y": 700
+        },
+        "_positionType": 2,
+        "positionType": 2,
+        "gravity": {
+          "__type__": "cc.Vec2",
+          "x": 500,
+          "y": 600
+        },
+        "speed": 0,
+        "speedVar": 0,
+        "tangentialAccel": 100,
+        "tangentialAccelVar": 200,
+        "radialAccelVar": 500
+      },
+      {
+        "__type__": "cc.Animation",
+        "node": {
+          "__id__": 1
+        },
+        "_defaultClip": {
+          "__uuid__": "40c6b847-7d5f-4706-92f5-6d7a3dfce2c3"
+        },
+        "_clips": [
+          {
+            "__uuid__": "40c6b847-7d5f-4706-92f5-6d7a3dfce2c3"
+          }
+        ],
+        "playOnLoad": true
+      }
+    ],
+    "_prefab": {
+      "__type__": "cc.PrefabInfo",
+      "root": {
+        "__id__": 1
+      },
+      "asset": {
+        "__id__": 0
+      },
+      "fileId": "a6xupeRapDW7HqrNWLtwJ8"
+    },
+    "_trs": {
+      "__type__": "TypedArray",
+      "ctor": "Float64Array",
+      "array": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    "_zIndex": 0
+  }
+]

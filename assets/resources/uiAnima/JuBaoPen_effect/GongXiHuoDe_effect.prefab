@@ -1,0 +1,120 @@
+[
+  {
+    "__type__": "cc.Prefab",
+    "_name": "GongXiHuoDe_effect",
+    "data": {
+      "__id__": 1
+    }
+  },
+  {
+    "__type__": "cc.Node",
+    "_name": "GongXiHuoDe_effect",
+    "_components": [
+      {
+        "__type__": "cc.ParticleSystem",
+        "node": {
+          "__id__": 1
+        },
+        "_dstBlendFactor": 1,
+        "_custom": {
+          "custom": false
+        },
+        "_file": {
+          "__uuid__": "75cfc15e-0a2b-4b99-872e-f6c0ab3130bc"
+        },
+        "_spriteFrame": {
+          "__uuid__": "ba9f1f29-86d6-4e8c-8f03-d28d5220e753"
+        },
+        "_stopped": false,
+        "totalParticles": 200,
+        "emissionRate": 60,
+        "life": 0.3,
+        "lifeVar": 0.4,
+        "_startColor": {
+          "__type__": "cc.Color",
+          "r": 255,
+          "g": 255,
+          "b": 255,
+          "a": 163
+        },
+        "_startColorVar": {
+          "__type__": "cc.Color",
+          "a": 124
+        },
+        "_endColor": {
+          "__type__": "cc.Color",
+          "r": 255,
+          "g": 255,
+          "b": 255,
+          "a": 214
+        },
+        "_endColorVar": {
+          "__type__": "cc.Color",
+          "a": 93
+        },
+        "angle": 360,
+        "angleVar": 360,
+        "startSize": 3,
+        "startSizeVar": 100,
+        "startSpinVar": 90,
+        "posVar": {
+          "__type__": "cc.Vec2",
+          "x": 200,
+          "y": 30
+        },
+        "_positionType": 1,
+        "positionType": 1,
+        "gravity": {
+          "__type__": "cc.Vec2",
+          "x": 0.25,
+          "y": 0.8600000143051147
+        },
+        "speed": 0,
+        "speedVar": 0,
+        "tangentialAccel": 0
+      },
+      {
+        "__type__": "cc.Animation",
+        "node": {
+          "__id__": 1
+        },
+        "_defaultClip": {
+          "__uuid__": "c8a23ce1-621e-4561-a3bf-e8ec04dbdf71"
+        },
+        "_clips": [
+          {
+            "__uuid__": "c8a23ce1-621e-4561-a3bf-e8ec04dbdf71"
+          }
+        ],
+        "playOnLoad": true
+      }
+    ],
+    "_prefab": {
+      "__type__": "cc.PrefabInfo",
+      "root": {
+        "__id__": 1
+      },
+      "asset": {
+        "__id__": 0
+      },
+      "fileId": "98PTuSBmNNW7++xtRO26nP"
+    },
+    "_trs": {
+      "__type__": "TypedArray",
+      "ctor": "Float64Array",
+      "array": [
+        0,
+        299.5,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    "_zIndex": 0
+  }
+]

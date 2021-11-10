@@ -1,0 +1,4293 @@
+{
+	"protocol": {
+		"c2s": {
+			"change_role_level": {
+				"cmd": 107,
+				"request": {}
+			},
+			"get_other_actor_info": {
+				"cmd": 116,
+				"request": {
+					"otherid": ["int", 0]
+				}
+			},
+			"client_setting": {
+				"cmd": 124,
+				"request": {
+					"value": ["int", 0],
+					"list": ["*int", 1]
+				}
+			},
+			"welcome_confirm": {
+				"cmd": 131,
+				"request": {
+				}
+			},
+			"heart_beat": {
+				"cmd": 199,
+				"request": {
+				}
+			},
+			"farm_reward": {
+				"cmd": 201,
+				"request": {
+				},
+				"response": {
+					"last_ts": ["int", 0],
+					"rewards": ["*reward_data", 1]
+				}
+			},
+			"battle_game_level": {
+				"cmd": 202,
+				"request": {}
+			},
+			"battle_reward": {
+				"cmd": 203,
+				"request": {}
+			},
+			"game_level_update": {
+				"cmd": 204,
+				"request": {}
+			},
+			"quick_battle": {
+				"cmd": 207,
+				"request": {
+				},
+				"response": {
+					"rewards": ["*reward_data", 0]
+				}
+			},
+			"game_level_next": {
+				"cmd": 215,
+				"request": {}
+			},
+			"game_level_reward": {
+				"cmd": 216,
+				"request": {
+					"id": ["int", 0]
+				},
+				"response": {
+					"ret": ["boolean", 0]
+				}
+			},			
+			"bag_add_grid": {
+				"cmd": 401,
+				"request": {
+					"bagNum": ["int", 0]
+				}
+			},
+			"bag_use": {
+				"cmd": 402,
+				"request": {
+					"id": ["int", 0],
+					"count": ["int", 1],
+					"index": ["int", 2],
+					"handle": ["int", 3]
+				}
+			},
+			"bag_melt": {
+				"cmd": 409,
+				"request": {
+					"type": ["int", 0],
+					"itemHandle": ["*int", 1]
+				}
+			},
+			"role_skill_upgrade": {
+				"cmd": 304,
+				"request": {
+					"id": ["int", 0]
+				}
+			},
+			"role_skill_upgrade_all": {
+				"cmd": 305,
+				"request": {}
+			},
+			"role_skill_sort_release": {
+				"cmd": 306,
+				"request": {
+					"skills": ["*int", 0]
+				}
+			},
+			"equip_forge": {
+				"cmd": 511,
+				"request": {
+					"forgeType": ["int", 0]
+				}
+			},
+			"deity_equip_inject": {
+				"cmd": 521,
+				"request": {
+					"slot": ["int", 0],
+					"mode": ["int", 1]
+				},
+				"response": {
+					"ret": ["boolean", 0]
+				}
+			},
+			"deity_equip_generate": {
+				"cmd": 522,
+				"request": {
+					"slot": ["int", 0]
+				}
+			},
+			"deity_equip_upgrade": {
+				"cmd": 523,
+				"request": {
+					"slot": ["int", 0]
+				}
+			},
+			"deity_equip_soul_upgrade": {
+				"cmd": 524,
+				"request": {
+					"slot": ["int", 0]
+				}
+			},
+			"deity_equip_suit_upgrade": {
+				"cmd": 525,
+				"request": {
+					"slot": ["int", 0]
+				}
+			},
+			"deity_equip_refine": {
+				"cmd": 526,
+				"request": {
+					"slot": ["int", 0],
+					"refinetype": ["int", 1],
+					"count": ["int", 2]
+				},
+				"response": {
+					"ret": ["boolean", 0],
+					"attrs": ["*attribute_data", 1],
+					"count": ["int", 2]
+				}
+			},
+			"deity_equip_suit_replace": {
+				"cmd": 527,
+				"request": {
+					"slot": ["int", 0]
+				}
+			},
+			"pet_active":{
+				"cmd": 601,
+				"request": {
+					"id": ["int", 0]
+				}
+			},
+			"pets_outbound": {
+				"cmd": 602,
+				"request": {
+					"outbound":["*int", 0]
+				}
+			},
+			"pet_addexp":{
+				"cmd": 603,
+				"request": {
+					"id": ["int", 0],
+					"autoBuy": ["int", 1]
+				},
+				"response": {
+					"ret": ["boolean", 0],
+					"level": ["int", 1]
+				}
+			},
+			"pet_add_gift":{
+				"cmd": 604,
+				"request": {
+					"id": ["int", 0]
+				},
+				"response": {
+					"ret": ["boolean", 0],
+					"level": ["int", 1]
+				}
+			},
+			"pet_skill_study": {
+				"cmd": 605,
+				"request": {
+					"id": ["int", 0],
+					"item_id": ["int", 1]
+				},
+				"response": {
+					"max_num": ["int", 0],
+					"skill_id": ["*int", 1],
+					"lock_pos": ["*int", 2]
+				}
+			},
+			"pet_skill_lock": {
+				"cmd": 606,
+				"request": {
+					"id": ["int", 0],
+					"pos": ["int", 1]
+				},
+				"response": {
+					"ret": ["boolean", 0]
+				}
+			},
+			"pet_savvy_learn": {
+				"cmd": 637,
+				"request": {
+					"id": ["int", 0]
+				}
+			},
+			"pet_savvy_save": {
+				"cmd": 638,
+				"request": {
+					"id": ["int", 0]
+				}
+			},
+			"pet_savvy_drug": {
+				"cmd": 639,
+				"request": {
+					"type": ["int", 0],
+					"id": ["int", 1]
+				}
+			},
+			"pet_savvy_mutate_drug": {
+				"cmd": 640,
+				"request": {
+					"id": ["int", 0]
+				}
+			},
+			"xianlv_active":{
+				"cmd": 701,
+				"request": {
+					"id": ["int", 0]
+				},
+				"response":{
+					"ret": ["boolean", 0]
+				}
+			},
+			"xianlv_out_bound":{
+				"cmd": 702,
+				"request": {
+					"arr": ["*int", 0]
+				}
+			},
+			"xianlv_add_exp":{
+				"cmd": 703,
+				"request": {
+					"id": ["int", 0],
+					"autoBuy": ["int", 1]
+				},
+				"response":{
+					"ret": ["boolean", 0],
+					"exp": ["int", 1],
+					"level": ["int", 2]
+				}
+			},
+			"xianlv_up_star":{
+				"cmd": 704,
+				"request": {
+					"id": ["int", 0]
+				},
+				"response":{
+					"ret": ["boolean", 0],
+					"star": ["int", 1]
+				}
+			},
+			"xianlv_up_lingpo":{
+				"cmd": 706,
+				"request": {
+					"id": ["int", 0]
+				},
+				"response":{
+					"ret": ["boolean", 0],
+					"spiritLv": ["int", 1]
+				}
+			},
+			"xianlv_up_lingtai":{
+				"cmd": 707,
+				"request": {
+					"id": ["int", 0]
+				},
+				"response":{
+					"ret": ["boolean", 0],
+					"promoteLv": ["int", 1]
+				}
+			},
+			"recharge": {
+				"cmd": 1802,
+				"request": {
+					"id": ["int", 0],
+					"count": ["int", 0]
+				},
+				"response": {
+					"order_id": ["string", 0]
+				}
+			},
+			"recharge_firstrecharge_reward_get": {
+				"cmd": 1804,
+				"request": {
+				}
+			},
+			"yaochi_enter": {
+				"cmd": 20001,
+				"request": {
+				}
+			},
+			"yaochi_refresh_quality": {
+				"cmd": 20002,
+				"request": {
+					"type": ["int", 0]
+				}
+			},
+			"yaochi_quick_complete": {
+				"cmd": 20003,
+				"request": {
+				}
+			},
+			"yaochi_rob_list": {
+				"cmd": 20004,
+				"request": {
+				},
+				"response": {
+					"escortList": ["*escort_info", 0]
+				}
+			},
+			"yaochi_rob_perform": {
+				"cmd": 20005,
+				"request": {
+					"playerId": ["int", 0]
+				}
+			},
+			"yaochi_revenge": {
+				"cmd": 20006,
+				"request": {
+					"recordId": ["int", 0]
+				}
+			},
+			"yaochi_get_reward": {
+				"cmd": 20010,
+				"request": {
+				}
+			},
+			"yaochi_perform": {
+				"cmd": 20015,
+				"request": {
+				}
+			},
+			"yaochi_catch_info": {
+				"cmd": 20016,
+				"request": {
+					"playerId": ["int", 0]
+				},
+				"response": {
+					"escortInfo": ["escort_info", 0]
+				}
+			},
+			"vip_get_awards": {
+				"cmd": 21001,
+				"request": {
+					"lv": ["int", 0]
+				}
+			},
+			"vip_gift_buy": {
+				"cmd": 21004,
+				"request": {
+					"lv": ["int", 0]
+				},
+				"response": {
+					"rst": ["boolean", 0]
+				}
+			},
+			"welfare_redeemcode": {
+				"cmd": 31053,
+				"request": {
+					"redeemcode": ["string", 0]
+				},
+				"response": {
+					"ret": ["int", 0]
+				}
+			},
+			"daily_sign_send_reward": {
+				"cmd": 31055,
+				"request": {
+					"index": ["int", 0]
+				}
+			},
+			"card_getreward": {
+				"cmd": 31056,
+				"request": {
+					"type": ["int", 0]
+				}
+			},
+			"auction_list":{
+				"cmd": 2803,
+				"request":{
+					"type": ["int",0]
+				}
+			},
+			"auction_offer":{
+				"cmd": 2804,
+				"request":{
+					"id": ["int",0],
+					"type": ["int",1],
+					"cost":["int",2]
+				}
+			},
+			"auction_record":{
+				"cmd": 2805,
+				"request":{
+					"auctionytpe": ["int",0]
+				}
+			},"auction_buy":{
+				"cmd": 2806,
+				"request":{
+					"id": ["int",0],
+					"type": ["int",1]
+				}
+			},
+			"chat_send": {
+				"cmd": 3101,
+				"request": {
+					"type": ["int", 0],
+					"str": ["string", 1]
+				}
+			},
+			"achievement_info": {
+				"cmd": 3201,
+				"request": {
+					"groupid": ["int", 0]
+				}
+			},
+			"achievement_get_reward": {
+				"cmd": 3202,
+				"request": {
+					"receivetype": ["int", 0], 
+					"groupid": ["int", 1], 
+					"taskid": ["int", 2]
+				}
+			},
+			"guild_get_info":{
+				"cmd": 3801
+			},
+			"guild_members": {
+				"cmd": 3802
+			},
+			"guild_get_list":{
+				"cmd": 3803
+			},
+			"guild_create": {
+				"cmd": 3804,
+				"request": {
+					"id":["int", 0],
+					"name":["string", 1]
+				}
+			},
+			"guild_member_out": {
+				"cmd": 3805
+			},
+			"guild_join": {
+				"cmd": 3806,
+				"request": {
+					"id":["int", 0]
+				}
+			},
+			"guild_ask_info":{
+				"cmd": 3807
+			},
+			"guild_setapply": {
+				"cmd": 3808,
+				"request": {
+					"playerid":["int", 0],
+					"result":["int", 1]
+				}
+			},
+			"guild_change_office": {
+				"cmd": 3809,
+				"request": {
+					"playerid":["int", 0],
+					"office":["int", 1]
+				}
+			},
+			"guild_kick": {
+				"cmd": 3811,
+				"request": {
+					"playerid":["int", 0]
+				}
+			},
+			"guild_change_notice": {
+				"cmd": 3814,
+				"request": {
+					"text":["string", 0]
+				}
+			},
+			"guild_chat_send":{
+				"cmd": 3826,
+				"request": {
+					"str": ["string", 0]
+				}
+			},
+			"guild_set_auto_add":{
+				"cmd": 3828,
+				"request": {
+					"auto": ["int", 0],
+					"power": ["int", 1]
+				}
+			},
+			"guild_apply_list":{
+				"cmd": 3831,
+				"request": {
+					
+				}
+			},
+			"guild_donate":{
+				"cmd": 3842,
+				"request": {
+					"id": ["int", 0]
+				}
+			},
+			"guild_peach_info":{
+				"cmd": 3846
+			},
+			"guild_peach_eat":{
+				"cmd": 3847,
+				"request": {
+					"id": ["int", 0]
+				}
+			},
+			"guild_peach_reward":{
+				"cmd": 3848,
+				"request": {
+					"id": ["int", 0]
+				}
+			},
+			"guild_protector_info":{
+				"cmd": 3851
+			},
+			"guild_uplevel":{
+				"cmd": 3852
+			},
+			"guild_protector_everyday_reward":{
+				"cmd": 3853,
+				"request": {
+					"rewardId": ["int", 0]
+				}
+			},
+			"guild_skill_info":{
+				"cmd": 3856
+			},
+			"guild_skill_up":{
+				"cmd": 3857,
+				"request": {
+					"skillType": ["int", 0]
+				}
+			},
+			"guild_dungeon_info":{
+				"cmd": 3871,
+				"request": {
+				},
+				"response":{
+					"profitCount": ["int", 0],
+					"assistCount": ["int", 1],
+					"firstReach": ["*int", 2]
+				}
+			},
+			"template_up_level":{
+				"cmd": 5001,
+				"request": {
+					"templateType": ["int", 0],
+					"autoBuy": ["int", 1]
+				}
+			},
+			"template_up_skill":{
+				"cmd": 5002,
+				"request": {
+					"templateType": ["int", 0],
+					"skillNo": ["int", 1]
+				}
+			},
+			"template_equip":{
+				"cmd": 5003,
+				"request": {
+					"templateType": ["int", 0],
+					"itemNo": ["int", 1]
+				}
+			},
+			"template_clothes":{
+				"cmd": 5004,
+				"request": {
+					"templateType": ["int", 0],
+					"clothesNo": ["int", 1]
+				}
+			},
+			"template_buy_clothes":{
+				"cmd": 5005,
+				"request": {
+					"templateType": ["int", 0],
+					"clothesNo": ["int", 1]
+				}
+			},
+			"template_drug":{
+				"cmd": 5006,
+				"request": {
+					"templateType": ["int", 0],
+					"drugNum": ["int", 1]
+				}
+			},
+			"template_up_stage":{
+				"cmd": 5008,
+				"request": {
+					"drugId": ["int", 0]
+				}
+			},
+			"tiannv_wash_req":{
+				"cmd": 5301,
+				"request": {
+					"pos": ["int", 0],
+					"washType": ["int", 1],
+					"lock": ["*int", 2]
+				}
+			},
+			"tiannv_wash_replace":{
+				"cmd": 5302,
+				"request": {
+					"pos": ["int", 0]
+				}
+			},
+			"tiannv_sigil_add_exp":{
+				"cmd": 5303,
+				"request": {
+					"costType": ["int", 0],
+					"autoBuy": ["int", 1]
+				}
+			},
+			"fragment_merge":{
+				"cmd": 5501,
+				"request": {
+					"no": ["int", 0],
+					"count": ["int", 1]
+				}
+			},
+			"totems_open":{
+				"cmd": 6201,
+				"request": {
+					"id": ["int", 0]
+				},
+				"response":{
+					"ret": ["boolean", 0],
+					"id": ["int", 1],
+					"lv": ["int", 2],
+					"upNum": ["int", 3],
+					"todayNum": ["int", 4],
+					"todayId": ["int", 5],
+					"breach": ["int", 6],
+					"totemsStar": ["int", 7],
+					"totemsupNum": ["int", 8],
+					"TotemsQilv": ["int", 9]
+				}
+			},
+			"totems_add_exp":{
+				"cmd": 6202,
+				"request": {
+					"id": ["int", 0],
+					"num": ["int", 1],
+					"autobuy": ["int", 2]
+				},
+				"response":{
+					"ret": ["boolean", 0],
+					"id": ["int", 1],
+					"lv": ["int", 2],
+					"upNum": ["int", 3],
+					"todayNum": ["int", 4],
+					"todayId": ["int", 5],
+					"breach": ["int", 6]
+				}
+			},
+			"totems_breach":{
+				"cmd": 6203,
+				"request": {
+					"id": ["int", 0]
+				},
+				"response":{
+					"ret": ["boolean", 0],
+					"id": ["int", 1],
+					"lv": ["int", 2],
+					"upNum": ["int", 3],
+					"todayNum": ["int", 4],
+					"todayId": ["int", 5],
+					"breach": ["int", 6]
+				}
+			},
+			"totems_outbound":{
+				"cmd": 6204,
+				"request": {
+					"data": ["*package_data", 0]
+				}
+			},
+			"arraysoul_addexp":{
+				"cmd": 6205,
+				"request": {
+					"id": ["int", 0],
+					"autobuy": ["int", 1]
+				}
+			},
+			"arrayflag_addexp":{
+				"cmd": 6206,
+				"request": {
+					"id": ["int", 0],
+					"autobuy": ["int", 1]
+				}
+			},
+			"add_arraycount":{
+				"cmd": 6207,
+				"request": {
+					"count": ["int", 0]
+				}
+			},
+			"strong_get_reward":{
+				"cmd": 6301,
+				"request": {
+					"no": ["int", 0]
+				},
+				"response":{
+					"ret": ["boolean", 0],
+					"no": ["int", 1]
+				}
+			},
+			"brother_activation":{
+				"cmd": 8001,
+				"request": {
+					"no": ["int", 0],
+					"activateType": ["int", 1]
+				},
+				"response":{
+					"ret": ["boolean", 0],
+					"no": ["int", 1]
+				}
+			},
+			"guild_team_info":{
+				"cmd": 17001
+			},
+			"guild_team_list":{
+				"cmd": 17002,
+				"request": {
+					"raidtype": ["int", 0],
+					"level": ["int", 1]
+				}
+			},
+			"team_create":{
+				"cmd": 17003,
+				"request": {
+					"raidtype": ["int", 0],
+					"level": ["int", 1]
+				},
+				"response":{
+					"ret": ["boolean", 0]
+				}
+			},
+			"guild_team_leave":{
+				"cmd": 17006,
+				"request": {
+					"raidtype": ["int", 0],
+					"level": ["int", 1]
+				}
+			},
+			"guild_team_kick":{
+				"cmd": 17008,
+				"request": {
+					"raidtype": ["int", 0],
+					"level": ["int", 1],
+					"memberid": ["int", 2]
+				},
+				"response":{
+					"ret": ["boolean", 0]
+				}
+			},
+			"guild_team_quick":{
+				"cmd": 17009,
+				"request": {
+					"raidtype": ["int", 0],
+					"level": ["int", 1]
+				},
+				"response":{
+					"ret": ["boolean", 0]
+				}
+			},
+			"guild_team_fight":{
+				"cmd": 17010,
+				"request": {
+					"raidtype": ["int", 0],
+					"level": ["int", 1],
+					"ext": ["int", 2]
+				},
+				"response":{
+					"ret": ["boolean", 0]
+				}
+			},
+			"team_call_robot":{
+				"cmd": 17011,
+				"request": {
+					"raidtype": ["int", 0],
+					"level": ["int", 1]
+				}
+			},
+			"team_condition":{
+				"cmd": 17012,
+				"request": {
+					"raidtype": ["int", 0],
+					"level": ["int", 1],
+					"needpower": ["int", 2]
+				}
+			},
+			"task_reward": {
+				"cmd": 18002,
+				"request": {
+					"id": ["int", 0]
+				}
+			},
+			"guild_boss_enter_map":{
+				"cmd": 32001
+			},
+			"guild_map_leave":{
+				"cmd": 23002,
+				"request": {
+					"mapid": ["int", 0]
+				},
+				"response":{
+					"ret": ["boolean", 0]
+				}
+			},
+			"guild_boss_challenge":{
+				"cmd": 32002,
+				"request": {
+					"challengeid": ["int", 0]
+				}
+			},
+			"guild_player_relive":{
+				"cmd": 32005
+			},
+			"guild_boss_last_rank":{
+				"cmd": 32006
+			},
+			"dailytask_up_level": {
+				"cmd": 5701,
+				"request": {
+				},
+				"response":{
+					"ret": ["boolean", 0],
+					"lv": ["int", 1],
+					"exp": ["int", 2]
+				}
+			},
+			"dailytask_activity_reward": {
+				"cmd": 5702,
+				"request": {
+					"rewardNo": ["int", 0]
+				},
+				"response":{
+					"ret": ["boolean", 0],
+              	 	"activityReward": ["int", 1]
+				}
+			},
+			"dailytask_activity_find": {
+				"cmd": 5703,
+				"request": {
+					"activityno": ["int", 0],
+					"cashtype": ["int", 1],
+					"findtype": ["int", 2],
+					"num": ["int", 3]
+				},
+				"response":{
+					"ret": ["boolean", 0],
+					"exp": ["int", 1],
+					"activityno": ["int", 2],
+					"num": ["int", 3],
+					"findtype": ["int", 4],
+					"findexpnum": ["int", 5]
+				}
+			},
+			"dailytask_activity_find_all_exp": {
+				"cmd": 5704,
+				"request": {
+				},
+				"response":{
+					"ret": ["boolean", 0],
+					"findexpnum": ["int", 1]
+				}
+			},
+			"dailytask_otheractivity_complete": {
+				"cmd": 5705,
+				"request": {
+					"otheractivity": ["int", 0]
+				}
+			},
+			"dailytask_otheractivity_reward": {
+				"cmd": 5706,
+				"request": {
+					"otheractivity": ["int", 0],
+           		    "reward": ["int", 1]
+				}
+			},
+			"dailytask_otheractivity_monster": {
+				"cmd": 5707,
+				"request": {
+					"no": ["int", 0]
+				}
+			},
+			"dailytask_up_monster": {
+				"cmd": 5708,
+				"request": {
+					"no": ["int", 0]
+				}
+			},
+			"dailytask_up_honor": {
+				"cmd": 5709,
+				"request": {
+				}
+			},
+			"activity_base_info": {
+				"cmd": 2601,
+				"request": {
+					"id": ["int", 0]
+				}
+			},
+			"activity_send_reward": {
+				"cmd": 2602,
+				"request": {
+					"id": ["int", 0],
+					"index": ["int", 1]
+				}
+			},
+			"activity_open": {
+				"cmd": 2606,
+				"request": {
+					"id": ["int", 0]
+				}
+			},
+			"activity_fight": {
+				"cmd": 2607,
+				"request": {
+					"id": ["int", 0]
+				}
+			},
+			"activity_lingmaidig_shake": {
+				"cmd": 2201,
+				"request": {
+				}
+			},
+			"activity_lingmaidig_box": {
+				"cmd": 2202,
+				"request": {
+					"boxId": ["int", 0]
+				}
+			},
+			"activity_daily_sign_send": {
+				"cmd": 31055,
+				"request": {
+					"index": ["int", 0]
+				},
+				"response":{
+					"ret": ["boolean", 0],
+					"rewards": ["*reward_data", 1]
+				}
+			},
+			"activity_ranking_list_request": {
+				"cmd": 5903,
+				"request": {
+				}
+			},
+			"welfare_bonus_open": {
+				"cmd": 31006,
+				"request": {
+					"id": ["int", 0]
+				},
+				"response":{
+					"ret": ["boolean", 0],
+					"money": ["int", 1]
+
+				}
+			},
+			"panacea_use": {
+				"cmd": 16001,
+				"request": {
+					"posid": ["int", 0]
+				}
+			},
+			"panacea_activity_props_use": {
+				"cmd": 16002,
+				"request": {
+					"id": ["int", 0]
+				}
+			},
+			"panacea_useAll": {
+				"cmd": 16003,
+				"request": {
+					"pos": ["int", 0]
+				}
+			},
+			"luck_draw": {
+				"cmd": 2702,
+				"request": {
+					"type": ["int", 0],
+               		"luckIndex": ["int", 1]
+				}
+			},
+			"luck_exchange": {
+				"cmd": 2703,
+				"request": {
+				},
+				"response":{
+					"flag": ["boolean", 0],
+					"count": ["int", 1]
+				}
+			},
+			"luck_open_box": {
+				"cmd": 2704,
+				"request": {
+				}
+			},
+			"rune_generate": {
+				"cmd": 801,
+				"request": {
+					"rune_list": ["*int", 0]
+				},
+				"response":{
+					"ret": ["boolean", 0],
+					"list": ["*rune_info1", 1],
+					"suitlevel": ["int", 2]
+				}
+			},
+			"rune_upgrade": {
+				"cmd": 811,
+				"request": {
+					"slot": ["int", 0],
+					"runelevel": ["int", 1],
+					"autobuy": ["int", 2],
+					"count": ["int", 3]
+				},
+				"response":{
+					"ret": ["boolean", 0],
+					"slot": ["int", 1],
+					"runelevel": ["int", 2],
+					"suitlevel": ["int", 3]
+				}
+			},
+			"rune_onekey_upgrade": {
+				"cmd": 812,
+				"request": {
+					"slot": ["int", 0]
+				},
+				"response":{
+					"ret": ["boolean", 0]
+				}
+			},
+			"rune_tongue_uplv": {
+				"cmd": 813,
+				"request": {
+				},
+				"response":{
+					"ret": ["boolean", 0],
+					"id": ["int", 1],
+					"tonguelv": ["int", 2],
+					"tonguesuit": ["int", 4],
+					"curInfo": ["soulrootInfo1", 5],
+					"nextInfo": ["soulrootInfo1", 6]
+				}
+			},
+			"rune_starlv": {
+				"cmd": 814,
+				"request": {
+					"starId": ["int", 0]
+				},
+				"response":{
+					"ret": ["boolean", 0],
+					"starId": ["int", 1],
+					"starlv": ["int", 2]
+				}
+			},
+			"rune_body_uplv": {
+				"cmd": 815,
+				"request": {
+				},
+				"response":{
+					"ret": ["boolean", 0],
+					"bodylv": ["int", 1],
+					"bodynum": ["int", 2],
+					"curbodyInfo": ["bodyInfo1", 3],
+					"nextbodyInfo": ["bodyInfo1", 4]
+				}
+			},
+			"rune_skill_uplv": {
+				"cmd": 816,
+				"request": {
+					"bodyId": ["int", 0]
+				},
+				"response":{
+					"ret": ["boolean", 0],
+					"bodyId": ["int", 1],
+					"skillLv": ["int", 2]
+				}
+			},
+            "shop_buy": {
+                "cmd": 1701,
+                "request": {
+                    "shopType": ["int", 0],
+                    "index": ["int", 1],
+                    "buynum": ["int", 2]
+                }
+            },
+            "shop_mystical_refresh": {
+                "cmd": 1707,
+                "request": {
+                    "shopType": ["int", 0]
+                },
+                "response": {
+                    "ret": ["boolean", 0]
+                }
+            },
+            "shop_mystical_buy": {
+                "cmd": 1706,
+                "request": {
+                    "shopType": ["int", 0],
+                    "index": ["int", 1],
+                    "buynum": ["int", 2]
+                },
+                "response": {
+                    "ret": ["boolean", 0]
+                }
+            },
+            "public_boss_reborn_mark": {
+                "cmd": 12030,
+                "request": {
+                    "rebornmark": ["int", 0]
+                }
+            },
+            "public_boss_clg": {
+                "cmd": 12010,
+                "request": {
+                    "id": ["int", 0]
+                }
+            },
+            "public_boss_clg_reborn": {
+                "cmd": 12011,
+                "request": {
+                    "id": ["int", 0]
+                }
+            },
+            "public_boss_rec_atk": {
+                "cmd": 12015,
+                "request": {
+                    "id": ["int", 0]
+                }
+            },
+            "public_boss_rec_kill": {
+                "cmd": 12016,
+                "request": {
+                    "id": ["int", 0]
+                }
+            },
+            "field_boss_clg": {
+                "cmd": 11004,
+                "request": {
+                    "id": ["int", 0]
+                }
+			},
+			"field_boss_list": {
+                "cmd": 11001,
+                "request": {}
+			},
+			"vip_boss_call": {
+                "cmd": 6001,
+                "request": {}
+			},
+            "vip_boss_clg": {
+                "cmd": 6004,
+                "request": {
+                    "id": ["int", 0]
+                }
+			},
+			"carbon_join": {
+				"cmd": 5201,
+                "request": {
+					"fubenType": ["int", 0],
+					"fubenNo": ["int", 1]
+                }
+			},
+			"carbon_all_reward": {
+				"cmd": 5212,
+                "request": {},
+                "response": {
+                    "ret": ["boolean", 0]
+                }
+			},
+			"carbon_heaven_reward": {
+				"cmd": 5205,
+                "request": {
+					"fubenNo": ["int", 0]
+				}
+			},
+			"carbon_mopup": {
+				"cmd": 5202,
+                "request": {
+					"fubenType": ["int", 0]
+				}
+			},
+			"rank_send": {
+				"cmd": 1901,
+                "request": {
+					"type": ["int", 0]
+				}
+			},
+			"worship_send": {
+				"cmd": 133,
+				"request": {}
+			},
+			"treasure_spellres_make": {
+				"cmd": 5401,
+				"request": {
+					"makeType": ["int", 0],
+					"autoBuy": ["int", 1],
+					"count": ["int", 2]
+				},
+				"response": {
+					"ret": ["boolean", 0],
+					"num": ["int", 1],
+					"perfectNum": ["int", 2],
+					"infos": ["*SpellsInfo", 3]
+                }
+			},
+			"treasure_spellres_use": {
+				"cmd": 5402,
+				"request": {
+					"pos": ["int", 0],
+					"spellsId": ["int", 1]
+				},
+				"response": {
+					"ret": ["boolean", 0],
+					"pos": ["int", 1],
+					"useSpellsNo": ["int", 2],
+					"spellsId": ["int", 3],
+					"spellsNo": ["int", 4],
+					"useSkillList": ["*int", 5],
+					"oldSkillList": ["*int", 6],
+					"lock": ["int", 7],
+					"num": ["int", 8]
+                }
+			},
+			"treasure_spellres_lock": {
+				"cmd": 5403,
+				"request": {
+					"lock": ["int", 0],
+					"spellsId": ["int", 1]
+				},
+				"response": {
+					"ret": ["boolean", 0],
+					"spellsId": ["int", 1],
+					"lock": ["int", 2]
+				}
+			},
+			"treasure_spellres_up_lv": {
+				"cmd": 5404,
+				"request": {
+					"pos": ["int", 0],
+					"autoBuy": ["int", 1]
+				},
+				"response": {
+					"ret": ["boolean", 0],
+					"pos": ["int", 1],
+					"lv": ["int", 2]
+				}
+			},
+			"treasure_spellres_smelt": {
+				"cmd": 5405,
+				"request": {
+					"spellsIdList": ["*int", 0]
+				},
+				"response": {
+					"spellsIdList": ["*int", 0],
+					"num": ["int", 1]
+				}
+			},
+			"treasure_spellres_xilian": {
+				"cmd": 5406,
+				"request": {
+					"srcid": ["int", 0],
+					"typ": ["int", 1],
+					"lock": ["*int", 2]
+				},
+				"response": {
+					"rst": ["boolean", 0],
+					"xlattrs": ["*attribute_data", 1]
+				}
+			},
+			"treasure_spellres_tunshi": {
+				"cmd": 5407,
+				"request": {
+					"srcid": ["int", 0],
+					"autoBuy": ["int", 1]
+				},
+				"response": {
+					"rst": ["boolean", 0],
+					"tunshilv": ["int", 1],
+					"tunshiexp": ["int", 2]
+				}
+			},
+			"treasure_spellres_tunshi_cc": {
+				"cmd": 5408,
+				"request": {
+					"srcid": ["int", 0],
+					"srcpos": ["int", 1],
+					"dstid": ["int", 2],
+					"dstpos": ["int", 3],
+					"typ": ["int", 4]
+				},
+				"response": {
+					"rst": ["boolean", 0]
+				}
+			},
+			"treasure_spellres_qiling": {
+				"cmd": 5409,
+				"request": {
+					"srcid": ["int", 0],
+					"qlno": ["int", 1]
+				},
+				"response": {
+					"rst": ["boolean", 0]
+				}
+			},
+			"treasure_spellres_qiling_lvup": {
+				"cmd": 5410,
+				"request": {
+					"srcid": ["int", 0],
+					"qilings": ["*int", 1]
+				},
+				"response": {
+					"rst": ["boolean", 0],
+					"qilinglv": ["int", 1],
+					"qilingexp": ["int", 2]
+				}
+			},
+			"treasure_spellres_qiling_cc": {
+				"cmd": 5411,
+				"request": {
+					"srcid": ["int", 0],
+					"srcpos": ["int", 1],
+					"dstid": ["int", 2],
+					"dstpos": ["int", 3],
+					"typ": ["int", 4]
+				},
+				"response": {
+					"rst": ["boolean", 0]
+				}
+			},
+			"equip_wear": {
+				"cmd": 501,
+				"request": {
+					"itemHandle": ["int", 0],
+					"pos": ["int", 1]
+				}
+			},
+			"carbon_cbt_star_reward": {
+				"cmd": 5203,
+				"request": {
+					"mapNo": ["int", 0],
+					"reward": ["int", 1]
+				}
+			}
+			,
+			"arena_info":
+			{
+				"cmd": 13001,
+				"request": {
+				},
+				"response": {
+					"targets": ["*arena_target_data", 0],
+					"rank":["int",1],
+					"maxRank":["int",2],
+					"pkCount":["int",3],
+					"remainTime":["int",4],
+					"buyCount":["int",5],
+					"medal":["int",6]
+				}
+			}
+			,
+			"arena_pk":
+			{
+				"cmd":13002,
+				"request": {
+					"rank":["int",0]
+				}
+			}
+			,
+			"arena_pk_reward":
+			{
+				"cmd":13003,
+				"request": {
+				}	
+			}
+			,
+			"arena_pkcount":
+			{
+				"cmd":13004,
+				"request": {
+				},
+				"response": {
+					"buycount":["int",0],
+					"pkcount":["int",1],
+					"ret":["boolean",2]
+				}
+			},
+			"arena_rank":
+			{
+				"cmd":13005,
+				"request": {
+				},
+				"response": {
+					"rankList":["*rank_data",0]
+				}
+			},
+			"god_soul_up_lv": {
+				"cmd": 4001,
+				"request": {
+					"id": ["int", 0]
+				}
+			},
+			"crossteam_rewardcount":
+			{
+				"cmd":130,
+				"request": {
+				}
+			}
+			,
+			"team_create_request":
+			{
+				"cmd":17003,
+				"request": {
+					"raidtype":["int",0],
+					"level":["int",1]
+				}
+			}
+			,
+			"team_join_request":
+			{
+				"cmd":17005,
+				"request": {
+					"raidtype":["int",0],
+					"level":["int",1],
+					"leaderid":["int",2]
+				}
+			},
+			"crossteam_change_partner":
+			{
+				"cmd":17013,
+				"request": {
+					"raid_type":["int",0],
+					"race_type":["int",1],
+					"race_id":["int",2]
+				}
+			},
+			"get_crossteam_count":
+			{
+				"cmd":130,
+				"request": {
+				}
+			},
+			"team_kick":
+			{
+				"cmd":17008,
+				"request": {
+					"raidtype":["int",0],
+					"level":["int",1],
+					"memberid":["int",2]
+				}
+			},
+			"team_change_leader":
+			{
+				"cmd":17014,
+				"request": {
+					"rid":["int",0],
+					"raidtype":["int",1]
+				}
+			},
+			"crossboss_getinf":
+			{
+				"cmd":2106,
+				"request": {
+				}
+			},
+			"kfboss_challenge":
+			{
+				"cmd":2102,
+				"request": {
+				}
+			},
+			"kfboss_view":
+			{
+				"cmd":17015,
+				"request": {
+					"ret":["boolean", 0]
+				}
+			},
+			"kfboss_relive":
+			{
+				"cmd":2105,
+				"request":{
+
+				}
+			},
+			"mail_get_content": {
+				"cmd": 901,
+				"request": {
+					"handle": ["int", 0]
+				}
+			},
+			"mail_get_reward": {
+				"cmd": 902,
+				"request": {
+					"handle": ["*int", 0]
+				}
+			},
+			"mail_get_scene_change": {
+				"cmd": 906,
+				"request": {}
+			},
+			"mail_get_delete": {
+				"cmd": 916,
+				"request": {}
+			},
+			"kingsport_info":
+			{
+				"cmd":3501,
+				"request":{}
+			},
+			"kingsport_some_one":
+			{
+				"cmd":3502,
+				"request":{
+					"ladderType":["int",0]
+				}
+			},
+			"kingsport_start_player":
+			{
+				"cmd":3503,
+				"request":{
+					"type":["boolean",0],
+					"ladderType":["int",1]
+				}
+			},
+			"kingsport_week_reward":
+			{
+				"cmd":3504,
+				"request":{
+					"ladderType":["int",0]
+				}
+			},
+			"kingsport_rank_info":
+			{
+				"cmd":3505,
+				"request":{
+					"ladderType":["int",0]
+				}
+			},
+			"kingsport_buy_count":
+			{
+				"cmd":3506,
+				"request":{
+					"ladderType":["int",0]
+				}
+			}, 
+			"title_active": {
+				"cmd": 920,
+				"request": {
+					"id": ["int", 0],
+					"type": ["int", 1]
+				},
+				"response": {
+					"ret":["boolean", 0]
+				}
+			},
+			"guildwar_enter":
+			{
+				"cmd": 27001,
+				"request": {
+				},
+				"response": {
+					"ret":["boolean", 0]
+				}
+			},
+			"guildwar_next_barrier":
+			{
+				"cmd":27002,
+				"request": {
+				}
+			},
+			"guildwar_attack_player":
+			{
+				"cmd": 27005,
+				"request": {
+					"targetid":["int", 0]
+				},
+				"response": {
+					"ret":["boolean", 0]
+				}
+			},
+			"guild_attack_boss":
+			{
+				"cmd": 27006,
+				"request": {
+					"bossid":["int", 0]
+				}
+			},
+			"guildwar_clear_attackcd":
+			{
+				"cmd": 27011,
+				"request": {
+				},
+				"response": {
+					"ret":["boolean", 0]
+				}
+			},
+			"guildwar_clear_reborncd":
+			{
+				"cmd": 27012,
+				"request": {
+				},
+				"response": {
+					"ret":["boolean", 0]
+				}
+			},
+			"guildwar_allguild_rankinfo":
+			{
+				"cmd": 27030,
+				"request": {
+				}
+			},
+			"guildwar_allplayer_rankinfo":{
+				"cmd": 27031,
+				"request": {
+				}
+			},
+			"guildwar_exit_barrier":
+			{
+				"cmd": 27036,
+				"request": {
+				}
+			},
+			"guildwar_getscore_reward":
+			{
+				"cmd": 27041,
+				"request": {
+					"rewardid":["int", 0]
+				}
+			},
+			"guildwar_team_recruit":
+			{
+				"cmd": 27042,
+				"request": {
+				}
+			},
+			"map_enter":
+			{
+				"cmd":23001,
+				"request":{
+					"mapid":["int",0]
+				},
+				"reponse":{
+					"ret":["boolean",0]
+				}
+			},
+			"map_leave":
+			{
+				"cmd":23002,
+				"request":{
+					"mapid":["int",0]
+				},
+				"reponse":{
+					"ret":["boolean",0]
+				}
+			},
+			"map_move":
+			{
+				"cmd":23003,
+				"request":{
+					"mapid":["int",0],
+					"x":["int",1],
+					"y":["int",2]
+				}
+			},
+			"map_fly":
+			{
+				"cmd":23004,
+				"request":{
+					"mapid":["int",0],
+					"x":["int",1],
+					"y":["int",2]
+				}
+			},
+			"eightone_hard_sweep":
+			{
+				"cmd":28001,
+				"request":{
+					"id":["int",0]
+				}
+			},
+			"eightone_sweep_all":
+			{
+				"cmd":28002,
+				"request":{
+				}
+			},
+			"eightone_hard_buy":
+			{
+				"cmd":28003,
+				"request":{
+					"id":["int",0]
+				}
+			},
+			"eightone_record":
+			{
+				"cmd":28004,
+				"request":{
+					"id":["int",0]
+				},
+				
+				"response":{
+					"first": ["eight_one_hard_clear", 0],
+					"fast": ["eight_one_hard_clear", 1]
+				}
+
+			}
+		},
+		"s2c": {
+			"game_server_time": {
+				"cmd": 6,
+				"request": {
+					"time": ["int", 0],
+					"serverRunDay": ["int", 1],
+					"serverMergeDay": ["int", 2]
+				}
+			},
+			"game_server_open_day": {
+				"cmd": 7,
+				"request": {
+					"day": ["int", 1],
+					"loginDay": ["int", 2],
+					"mergeDay": ["int", 3],
+					"mergeTime": ["int", 4]
+				}
+			},
+			"game_error_code": {
+				"cmd": 9,
+				"request": {
+					"code": ["int", 0],
+					"msg": ["string", 1]
+				}
+			},
+			"guild_join": {
+				"cmd": 121,
+				"request": {
+					"guildID": ["int", 0],
+					"guildName": ["string", 1]
+				}
+			},
+			"show_other_player": {
+				"cmd": 116,
+				"request": {
+					"id": ["int", 0],
+					"name": ["string", 1],
+					"level": ["int", 2],
+					"job": ["int", 3],
+					"sex": ["int", 4],
+					"power": ["int", 5],
+					"vip": ["int", 6],
+					"guildName": ["string", 7],
+					"partner": ["string", 8],
+					"petList": ["*int", 9],
+					"xianlvList": ["*int", 10],
+					"shows": ["*int", 11],
+					"attributeData": ["*int", 12],
+					"equipsData": ["*equip_data", 13],
+					"headframe": ["int", 14],
+					"honorLv": ["int", 15],
+					"xhValue": ["int", 16],
+					"mlValue": ["int", 17],
+					"blueInfo": ["blue_info", 18]
+				}
+			},
+			"heart_beat": {
+				"cmd": 200,
+				"request": {
+				}
+			},
+			"game_level_init": {
+				"cmd": 201,
+				"request": {
+					"cid": ["int", 0],
+					"chapterid": ["int", 1],
+					"sid": ["int", 2],
+					"minunm": ["int", 3],
+					"maxnum": ["int", 4],
+					"monsters": ["*chapter_mondata", 5],
+					"bossNeedWave": ["int", 6],
+					"bossId": ["monster_data", 7],
+					"showAward": ["*reward_data", 8],
+					"desc": ["string", 9],
+					"goldEff": ["int", 10],
+					"expEff": ["int", 11],
+					"killMonsterCount": ["int", 12],
+					"nextmap": ["boolean", 13],
+					"chapterreward": ["*int", 14],
+					"last_ts": ["int", 15]
+				}
+			},
+			"battle_boss_result": {
+				"cmd": 203,
+				"request": {
+					"result": ["int", 0],
+					"rewards": ["*reward_data", 1],
+					"star": ["int", 2]
+				}
+			},
+			"quick_battle": {
+				"cmd": 207,
+				"request": {
+					"free": ["boolean", 0],
+					"num": ["int", 1],
+					"allnum": ["int", 2]
+				}
+			},
+			"role_skill_upgrade_result": {
+				"cmd": 304,
+				"request": {
+					"id": ["int", 0],
+					"level": ["int", 1]
+				}
+			},
+			"role_skill_all_upgrade_result": {
+				"cmd": 305,
+				"request": {
+					"level": ["*int", 0]
+				}
+			},
+			"bag_init_data": {
+				"cmd": 401,
+				"request": {
+					"code": ["int", 0],
+					"type": ["int", 1],
+					"datas": ["*item_data", 2]
+				}
+			},
+			"bag_deal_valumn_add": {
+				"cmd": 402,
+				"request": {
+					"bagNum": ["int", 0]
+				}
+			},
+			"bag_deal_delete_item": {
+				"cmd": 403,
+				"request": {
+					"type": ["int", 0],
+					"handle": ["int", 1]
+				}
+			},
+
+			"bag_deal_add_item": {
+				"cmd": 404,
+				"request": {
+					"type": ["int", 0],
+					"data": ["item_data", 1],
+					"showTip": ["int", 2],
+					"multiple": ["int", 3]
+				}
+			},
+			"bag_update_item_data": {
+				"cmd": 405,
+				"request": {
+					"type": ["int", 0],
+					"handle": ["int", 1],
+					"num": ["int", 2],
+					"showTip": ["int", 3],
+					"lock": ["int", 4],
+					"multiple": ["int", 5],
+					"invalidtime": ["int", 6]
+				}
+			},
+			"bag_user_item_back": {
+				"cmd": 406,
+				"request": {
+					"tipIndex": ["int", 0]
+				}
+			},
+			"equip_forge": {
+				"cmd": 511,
+				"request": {
+					"forgeType": ["int", 0],
+					"forgeLevel": ["*int", 1]
+				}
+			},
+			"pets_init": {
+				"cmd": 601,
+				"request": {
+					"list":["*pet_info", 0],
+					"outbound":["*int", 1]
+				}
+			},
+			"pets_savvy_update": {
+				"cmd": 637,
+				"request": {
+					"id":["int", 0],
+					"by":["boolean", 1],
+					"attrs": ["*structAttributeData", 2],
+					"storage": ["*structAttributeData", 3]
+				}
+			},
+			"xianlv_init": {
+				"cmd": 701,
+				"request": {
+					"list":["*xianlv_info", 0],
+					"outbound":["*int", 1],
+					"equipment":["*equipment", 2],
+					"specialAttr":["*attribute_data", 3]
+				}
+			},
+			"auction_list":{
+				"cmd": 2802,
+				"request":{
+					"type":["int",0],
+					"timer":["int",1],
+					"items":["*AuctionItem",2]
+				}
+			},
+			"auction_record_list":{
+				"cmd": 2803,
+				"request":{
+					"type":["int",0],
+					"items":["*AuctionItem",1]
+				}
+			},
+			"chat_new": {
+				"cmd": 3101,
+				"request": {
+					"chatData":["chat_data", 0]
+				}
+			},
+			"chat_send_sucess": {
+				"cmd": 3103,
+				"request": {
+					"success": ["boolean", 0]
+				}
+			},
+			"guild_getinfo":{
+				"cmd": 3801,
+				"request": {
+					"id": ["int", 0],
+					"name": ["string", 1],
+					"variable": ["other_guild_info", 2],
+					"summary": ["guild_summary", 3]
+				}
+			},
+			"guild_members":{
+				"cmd": 3802,
+				"request": {
+					"members": ["*member_info", 0]
+				}
+			},
+			"guild_sendlist":{
+				"cmd": 3803,
+				"request": {
+					"guilds": ["*guild_summary", 0],
+					"receiveCount": ["int", 1]
+				}
+			},
+			"guild_create": {
+				"cmd": 3804,
+				"request": {
+					"result":["int", 0],
+					"id":["int", 1]
+				}
+			},
+			"guild_ask_info": {
+				"cmd": 3807,
+				"request": {
+					"applyinfo":["*guild_apply", 0]
+				}
+			},
+			"guild_change_office": {
+				"cmd": 3809,
+				"request": {
+					"playerid":["int", 0],
+					"office":["int", 1]
+				}
+			},
+			"guild_member_out": {
+				"cmd": 3811,
+				"request": {
+					"playerid":["int", 0]
+				}
+			},
+			"guild_fund": {
+				"cmd": 3813,
+				"request": {
+					"fund":["int", 0]
+				}
+			},
+			"guild_change_notice": {
+				"cmd": 3814,
+				"request": {
+					"result":["int", 0],
+					"text":["string", 0]
+				}
+			},
+			"guild_record_add": {
+				"cmd": 3821,
+				"request": {
+					"record":["guild_record", 0]
+				}
+			},
+			"guild_record_data": {
+				"cmd": 3822,
+				"request": {
+					"records":["*guild_record", 0]
+				}
+			},
+			"guild_donate_back":{
+				"cmd": 3841,
+				"request": {
+					"result": ["boolean", 0],
+					"id": ["int", 1],
+					"totalNum": ["int", 2]
+				}
+			},
+			"guild_donate_info":{
+				"cmd": 3842,
+				"request": {
+					"totalNum": ["int", 0]
+				}
+			},
+			"guild_peach_info":{
+				"cmd": 3846,
+				"request": {
+					"rewardMark": ["int", 0],
+					"eatStatus": ["boolean", 2]
+				}
+			},
+			"guild_peach_record":{
+				"cmd": 3847,
+				"request": {
+					"peachExp": ["int", 0],
+					"eatRecord": ["*peach_record", 1]
+				}
+			},
+			"guild_peach_record_add":{
+				"cmd": 3848,
+				"request": {
+					"peachExp": ["int", 0],
+					"eatRecord": ["peach_record", 1]
+				}
+			},
+			"guild_protector_info":{
+				"cmd": 3851,
+				"request": {
+					"todayActive": ["int", 0],
+					"totalActive": ["int", 1],
+					"protectorLv": ["int", 2],
+					"rewardMark": ["int", 3]
+				}
+			},
+			"guild_protector_task_info":{
+				"cmd": 3852,
+				"request": {
+					"taskinfos": ["*protector_task_info", 0]
+				}
+			},
+			"guild_skill_info":{
+				"cmd": 3856,
+				"request": {
+					"skillInfos": ["*skill_info", 0],
+					"configs": ["*guild_skill_config", 1]
+				}
+			},
+			"guild_skill_up":{
+				"cmd": 3857,
+				"request": {
+					"skillInfo": ["skill_info", 0],
+					"config": ["guild_skill_config", 2]
+				}
+			},
+			"tiannv_equip":{
+				"cmd": 5301,
+				"request": {
+					"data": ["*tiannv_equip_data", 0]
+				}
+			},
+			"tiannv_wash_res":{
+				"cmd": 5302,
+				"request": {
+					"pos": ["int", 0],
+					"washNum": ["int", 1],
+					"attrData": ["*tiannv_attrs_data", 2],
+					"washData": ["*tiannv_attrs_data", 3]
+				}
+			},
+			"tiannv_wash_replace_res":{
+				"cmd": 5303,
+				"request": {
+					"pos": ["int", 0],
+					"attrData": ["*tiannv_attrs_data", 1],
+					"washData": ["*tiannv_attrs_data", 2]
+				}
+			},
+			"tiannv_siggil_info":{
+				"cmd": 5304,
+				"request": {
+					"sigillist": ["*level_exp_data", 0],
+					"curindex": ["int", 1]
+				}
+			},
+			"totems_info":{
+				"cmd": 6201,
+				"request": {
+					"data": ["*totems_data", 0],
+					"outboundInfo": ["*package_data", 1],
+					"TotemsWeiCount": ["int", 2]
+				}
+			},
+			"strong_info":{
+				"cmd": 6301,
+				"request": {
+					"data": ["*enhance_data", 0],
+					"point": ["int", 1],
+					"rewards": ["*int", 2]
+				}
+			},
+			"strong_add_info":{
+				"cmd": 6302,
+				"request": {
+					"no": ["int", 0],
+					"val": ["int", 1],
+					"point": ["int", 2]
+				}
+			},
+			"guild_boss_info":{
+				"cmd": 32001,
+				"request": {
+					"status": ["int", 0],
+					"changetime": ["int", 1]
+				}
+			},
+			"guild_boss_update":{
+				"cmd": 32002,
+				"request": {
+					"shieldvalue": ["int", 0],
+					"hp": ["int", 1],
+					"hpperc": ["int", 2]
+				}
+			},
+			"guild_player_dead":{
+				"cmd": 32005,
+				"request": {
+					"deadtime": ["int", 0]
+				}
+			},
+			"guild_boss_now_rank":{
+				"cmd": 32006,
+				"request": {
+					"playerranks": ["*guildboss_rank", 0],
+					"mydamage": ["int", 1],
+					"myrank": ["int", 2]
+				}
+			},
+			"guild_boss_rank":{
+				"cmd": 32008,
+				"request": {
+					"firstinfo": ["guildboss_firstinfo", 0],
+					"playerranks": ["*guildboss_rank", 1],
+					"mydamage": ["int", 2],
+					"myrank": ["int", 3]
+				}
+			},
+			"brother_info":{
+				"cmd": 32111,
+				"request": {
+					"data": ["*int", 0],
+					"brothers": ["*brother_data", 1]
+				}
+			},
+			"daily_task_info": {
+				"cmd": 5701,
+				"request": {
+					"lv": ["int", 0],
+					"exp": ["int", 1],
+					"today": ["*dailyTask_data", 2],
+					"yesterday": ["*dailyTask_data", 3],
+					"findItem": ["*dailyTask_data", 4],
+					"findExp": ["*dailyTask_data", 5],
+					"active": ["int", 6],
+					"activeReward": ["int", 7],
+					"monster": ["otherActivity_monster", 8],
+					"chapterWar": ["otherActivity_data", 9],
+					"teamFB": ["otherActivity_data", 10],
+					"find": ["int", 11],
+					"honorLv": ["int", 12],
+					"honoractive": ["int", 13]
+				}
+			},
+			"daily_task_update": {
+				"cmd": 5702,
+				"request": {
+				"lv": ["int", 0],
+                "exp": ["int", 1],
+                "today": ["*dailyTask_data", 2],
+                "yesterday": ["*dailyTask_data", 3],
+                "findItem": ["*dailyTask_data", 4],
+                "findExp": ["*dailyTask_data", 5],
+                "active": ["int", 6],
+                "activeReward": ["int", 7],
+                "monster": ["otherActivity_monster", 8],
+                "chapterWar": ["otherActivity_data", 9],
+                "teamFB": ["otherActivity_data", 10],
+                "find": ["int", 11],
+                "honorLv": ["int", 12],
+                "honoractive": ["int", 13]
+				}
+			},
+			"panacea_update": {
+				"cmd": 16001,
+				"request": {
+					"lvlist": ["*int", 0],
+					"attrs": ["*attribute_data", 1],
+					"propsInfo": ["*props_data", 2],
+					"propsAttrs": ["*attribute_data", 3]
+				}
+			},
+			"rune_init": {
+				"cmd": 801,
+				"request": {
+					"list": ["*rune_info", 0],
+					"suitlevel": ["int", 1],
+					"tonguelv": ["int", 2],
+					"tonguesuit": ["int", 3],
+					"curInfo": ["soulrootInfo", 4],
+					"nextInfo": ["soulrootInfo", 5],
+					"starlv": ["*int", 6],
+					"bodylv": ["int", 7],
+					"bodynum": ["int", 8],
+					"curbodyInfo": ["bodyInfo", 9],
+					"nextbodyInfo": ["bodyInfo", 10],
+					"bodyskilllv": ["*int", 11],
+					"runeStouRef": ["*runeStouRefInfo", 12]
+				}
+			},
+			"luck_info": {
+				"cmd": 2701,
+				"request": {
+					"counts": ["*int", 0],
+					"records": ["*luck_record", 1],
+					"lucky": ["int", 2],
+					"round": ["int", 3],
+					"daylist": ["*int", 4],
+					"equipcounts": ["*int", 5],
+					"equiplucky": ["int", 6],
+					"equiprecords": ["*luck_record", 7],
+					"equipdaylist": ["*int", 8],
+					"equipround": ["int", 9],
+					"totemscounts": ["*int", 10],
+					"totemslucky": ["int", 11],
+					"totemsrecords": ["*luck_record", 12],
+					"totemsdaylist": ["*int", 13],
+					"totemsround": ["int", 14],
+					"babycounts": ["*int", 15],
+					"babyrecords": ["*luck_record", 16],
+					"babydaylist": ["*int", 17],
+					"babylucky": ["int", 18],
+					"babyround": ["int", 19],
+					"tianshencounts": ["*int", 20],
+					"tianshenrecords": ["*luck_record", 21],
+					"tianshenlucky": ["int", 22],
+					"tianshenround": ["int", 23],
+					"tianshendaylist": ["*int", 24],
+					"totemsboxidx": ["int", 25],
+					"totemsboxcnt": ["int", 26],
+					"transfercounts": ["*int", 27],
+					"transferrecords": ["*luck_record", 28],
+					"transferlucky": ["int", 29],
+					"transferround": ["int", 30],
+					"transferdaylist": ["*int", 31]
+				}
+			},
+			"luck_ret": {
+				"cmd": 2702,
+				"request": {
+					"type": ["int", 0],
+					"index": ["int", 1],
+					"rewards": ["*reward_data", 2]
+				}
+			},
+			"luck_update": {
+				"cmd": 2704,
+				"request": {
+					"jf": ["int", 0],
+					"freeTs": ["int", 1],
+					"surplusTime": ["int", 2]
+				}
+			},
+			"recharge_double": {
+				"cmd": 1801,
+				"request": {
+					"reward": ["*int", 0],
+					"choicerechare": ["int", 1],
+					"finish": ["*int", 2]
+				}
+			},
+			"recharge_first_info": {
+				"cmd": 1802,
+				"request": {
+					"rechargeNum": ["int", 0],
+					"reward": ["*int", 1],
+					"firsttime": ["int", 2]
+				}
+			},
+			"recharge_first_recharge_reward": {
+				"cmd": 1804,
+				"request": {
+					"reward": ["*int", 0]
+				}
+			},
+			"recharge_dailyrechare": {
+				"cmd": 1806,
+				"request": {
+					"dailyrechare": ["int", 0],
+					"rewardmark": ["int", 1],
+					"dailyid": ["int", 2],
+					"monthrecharge": ["int", 3]
+				}
+			},
+			"recharge_count": {
+				"cmd": 133,
+				"request": {
+					"total": ["int", 0],
+              		"today": ["int", 1]
+				}
+			},
+			"activity_init_info": {
+				"cmd": 2601,
+				"request": {
+					"datas": ["*activity_data_collection", 0]
+				}
+			},
+			"activity_update_info": {
+				"cmd": 2606,
+				"request": {
+					"id": ["int", 0],
+					"datas": ["activity_data_collection", 1]
+				}
+			},
+			"activity_draw_rewards": {
+				"cmd": 2610,
+				"request": {
+					"activityId": ["int", 0],
+					"rewards": ["*reward_data", 1]
+				}
+			},
+			"activity_lingmaidig_info": {
+				"cmd": 2201,
+				"request": {
+					"level": ["int", 0],
+					"exp": ["int", 1],
+					"odds": ["int", 2],
+					"shake": ["int", 3],
+					"drawBin": ["*int", 4],
+					"amplitude": ["int", 5]
+				}
+			},
+			"activity_daily_sign": {
+				"cmd": 31056,
+				"request": {
+					"currentDay": ["int", 0],
+					"signInList": ["*int", 1]
+				}
+			},
+			"activity_ranking_list": {
+				"cmd": 5903,
+				"request": {
+					"type": ["int", 0],
+					"datas": ["*ranking_list", 1],
+					"selfRank": ["int", 2],
+					"selfValue": ["int", 3],
+					"endTime": ["int", 4]
+				}
+			},
+			"welfare_bonus_add": {
+				"cmd": 31006,
+				"request": {
+					"id": ["int", 0],
+					"name": ["string", 2],
+					"endTime": ["int", 3]
+				}
+			},
+			"actor_base": {
+				"cmd": 101,
+				"request": {
+					"handle": ["int", 0],
+					"actorid": ["int", 1],
+					"serverid": ["int", 2],
+					"actorname": ["string", 3],
+					"job": ["int", 4],
+					"sex": ["int", 5],
+					"level": ["int", 6],
+					"exp": ["int", 7],
+					"power": ["int", 8],
+					"gold": ["int", 9],
+					"yuanbao": ["int", 10],
+					"byb": ["int", 11],
+					"contrib": ["int", 12],
+					"vip": ["int", 13],
+					"bagnum": ["int", 14],
+					"clientvalue": ["int", 15],
+					"clientvaluelist": ["*int", 16],
+					"guildid": ["int", 17],
+					"guildname": ["string", 18],
+					"friendcoin": ["int", 19],
+					"rechargepoint": ["int", 20],
+					"createtime": ["int", 21],
+					"nowserverid": ["int", 22]
+				}
+			},
+			"sub_roles": {
+				"cmd": 102,
+				"request": {
+					"roleList": ["role_data", 1]
+				}
+			},
+			"res_change": {
+				"cmd": 106,
+				"request": {
+					"type": ["int", 0],
+					"value": ["int", 1],
+					"showTip": ["int", 2],
+					"multiple": ["int", 3]
+				}
+			},
+			"exp_change": {
+				"cmd": 107,
+				"request": {
+					"level": ["int", 0],
+					"exp": ["int", 1],
+					"upexp": ["int", 2]
+				}
+			},
+			"sub_role_attr_change": {
+				"cmd": 108,
+				"request": {
+					"roleID": ["int", 0],
+					"attributeData": ["*int", 1],
+					"power": ["int", 2],
+					"hotohoripower": ["int", 3],
+					"ringpower": ["int", 4],
+					"xianqipower": ["int", 5],
+					"xianqimaxstar": ["int", 6],
+					"destinypower": ["int", 7],
+					"bladeSoulPower": ["int", 8],
+					"lineuppower": ["int", 9],
+					"entitysPower": ["*int", 10]
+				}
+			},
+			"template_init_data": {
+				"cmd": 5001,
+				"request": {
+					"templateType": ["int", 0],
+					"lv": ["int", 1],
+					"upNum": ["int", 2],
+					"drugNum": ["int", 3],
+					"useClothes": ["int", 4],
+					"clothesList": ["*int", 5],
+					"skillList": ["*int", 6],
+					"equipList": ["*equip_item_data", 7],
+					"reward": ["int", 8],
+					"startUp": ["int", 9],
+					"facade": ["*facade_data", 10]
+				}
+			},
+			"template_update_data": {
+				"cmd": 5002,
+				"request": {
+					"templateType": ["int", 0],
+					"lv": ["int", 1],
+					"upNum": ["int", 2],
+					"drugNum": ["int", 3],
+					"useClothes": ["int", 4],
+					"clothesList": ["*int", 5],
+					"skillList": ["*int", 6],
+					"equipList": ["*equip_item_data", 7],
+					"reward": ["int", 8],
+					"startUp": ["int", 9],
+					"facade": ["*facade_data", 10],
+					"crit": ["int", 11]
+				}
+			},
+			"field_boss_base_list": {
+                "cmd": 11002,
+                "request": {
+                    "bossInfos": ["*field_boss_info", 0]
+                }
+            },
+            "field_boss_update_one": {
+                "cmd": 11003,
+                "request": {
+                    "bossInfo": ["field_boss_info", 0]
+                }
+            },
+            "public_boss_base_list": {
+                "cmd": 12011,
+                "request": {
+                    "bossInfos": ["*public_boss_info", 0]
+                }
+            },
+            "public_boss_update_one": {
+                "cmd": 12012,
+                "request": {
+                    "bossInfo": ["public_boss_info", 0]
+                }
+            },
+            "public_boss_update_challenge": {
+                "cmd": 12020,
+                "request": {
+                    "challengenum": ["int", 0],
+                    "recovertiem": ["int", 1],
+                    "purchasecount": ["int", 2],
+                    "reborncount": ["int", 3],
+                    "rebornmark": ["int", 4]
+                }
+            },
+            "public_boss_update_attack": {
+                "cmd": 12021,
+                "request": {
+                    "attackinfos": ["*public_attack_info", 0],
+                    "myattackinfo": ["public_attack_info", 1]
+                }
+            },
+            "public_boss_record_kill": {
+                "cmd": 12031,
+                "request": {
+                    "killinfos": ["*public_kill_info", 0]
+                }
+            },
+            "public_boss_record_attack": {
+                "cmd": 12030,
+                "request": {
+					"attackinfos": ["*public_attack_info", 0],
+					"rank": ["int", 1]
+                }
+            },
+            "public_boss_challenge_fail": {
+                "cmd": 12010,
+                "request": {}
+            },
+            "vipboss_base_list": {
+                "cmd": 6002,
+                "request": {
+                    "bossInfos": ["*vipboss_info", 0]
+                }
+            },
+            "vipboss_update_one": {
+                "cmd": 6003,
+                "request": {
+                    "bossInfo": ["vipboss_info", 0]
+                }
+            },
+            "rank_data": {
+                "cmd": 1901,
+                "request": {
+					"type": ["int", 0],
+					"datas": ["*rank_data_list", 1],
+					"selfRank": ["int", 2],
+					"value": ["int", 3]
+                }
+            },
+            "rank_worship": {
+                "cmd": 134,
+                "request": {
+                    "status": ["int", 0]
+                }
+            },
+            "carbon_info_update": {
+                "cmd": 5201,
+                "request": {
+                    "fuben_data": ["*fuben_data", 0]
+                }
+            },
+            "carbon_cbt_base": {
+                "cmd": 5202,
+                "request": {
+                    "data": ["*treasuremapn_data", 0],
+                    "starReward": ["*star_reward_data", 1]
+                }
+            },
+            "carbon_cbt_reward": {
+                "cmd": 5203,
+                "request": {
+                    "starReward": ["*star_reward_data", 0]
+                }
+            },
+            "carbon_llt_base": {
+                "cmd": 5204,
+                "request": {
+                    "hard": ["int", 0],
+                    "layer": ["int", 1],
+                    "config": ["*wildgeeseFb_config", 2]
+                }
+            },
+            "carbon_heaven_base": {
+                "cmd": 5205,
+                "request": {
+                    "layer": ["int", 0],
+                    "todayLayer": ["int", 1],
+                    "rewardNo": ["*int", 2]
+                }
+            },
+            "carbon_heaven_reward": {
+                "cmd": 5206,
+                "request": {
+                    "rewardNo": ["*int", 0]
+                }
+            },
+            "ad_devildom_base": {
+                "cmd": 8301,
+                "request": {
+                    "attackOption": ["*anabasis_attack", 0],
+                    "refreshCount": ["int", 1],
+                    "buffs": ["*int", 2],
+                    "status": ["int", 3],
+                    "revive": ["int", 4],
+                    "clearAll": ["boolean", 5]
+                }
+            },
+            "ad_devildom_bar": {
+                "cmd": 8302,
+                "request": {
+                    "barrierlist": ["*anabasis_barrier", 0]
+                }
+            },
+            "ad_devildom_bar_one": {
+                "cmd": 8303,
+                "request": {
+                    "barrierinfo": ["anabasis_barrier", 0]
+                }
+            },
+            "shop_update": {
+                "cmd": 1701,
+                "request": {
+                    "shopType": ["int", 0],
+                    "index": ["int", 1],
+                    "count": ["int", 2]
+                }
+            },
+            "shop_init": {
+                "cmd": 1710,
+                "request": {
+                    "shopdatas": ["*shop_data", 0]
+                }
+            },
+            "shop_mystical_update": {
+                "cmd": 1711,
+                "request": {
+                    "shopType": ["int", 0],
+                    "datas": ["*mystical_shop_data", 1],
+                    "refreshcount": ["int", 2],
+                    "refreshtime": ["int", 3],
+                    "config": ["*mystical_config_data", 4]
+                }
+            },
+            "shop_unlockdata_update": {
+                "cmd": 1716,
+                "request": {
+                    "records": ["*shop_unlock_data", 0]
+                }
+            },
+			"task_info": {
+				"cmd": 18001,
+				"request": {
+					"type": ["int", 0],
+					"tasks": ["*task_data", 1]
+				}
+			},
+			"task_update": {
+				"cmd": 18002,
+				"request": {
+					"type": ["int", 0],
+					"data": ["task_data", 1]
+				}
+			},
+			"yaochi_info_update": {
+				"cmd": 20001,
+				"request": {
+					"escortCount": ["int", 0],
+					"robCount": ["int", 1],
+					"status": ["int", 2],
+					"quality": ["int", 3],
+					"finishTime": ["int", 4]
+				}
+			},
+			"yaochi_reward_show": {
+				"cmd": 20007,
+				"request": {
+					"quality": ["int", 0],
+					"record": ["*catch_escort_info", 1],
+					"reachReward": ["*reward_data", 2],
+					"lossReward": ["*reward_data", 3]
+				}
+			},
+			"yaochi_record_data": {
+				"cmd": 20030,
+				"request": {
+					"records": ["*record_info", 0]
+				}
+			},
+			"yaochi_record_update": {
+				"cmd": 20031,
+				"request": {
+					"record": ["record_info", 0]
+				}
+			},
+			"vip_update_data": {
+				"cmd": 21001,
+				"request": {
+					"lv": ["int", 0],
+					"exp": ["int", 1],
+					"state": ["int", 2],
+					"otherreward": ["int", 3],
+					"wanbavipstate": ["int", 4],
+					"gift": ["int", 5],
+					"vipStateEx": ["int", 6],
+					"giftEx": ["int", 7]
+				}
+			},
+			"welfare_info": {
+				"cmd": 31050,
+				"request": {
+					"month": ["int", 0],
+					"week": ["int", 1],
+					"lvReward": ["int", 2],
+					"welfareReward": ["int", 3],
+					"rankData": ["entity_shows2", 4],
+					"avgLv": ["int", 5],
+					"forever": ["int", 6],
+					"firstMonth": ["int", 7],
+					"isGetMonthCardReward": ["boolean",8],
+					"isGetForeverCardReward": ["boolean",9]
+				}
+			},
+			"battle_round": {
+				"cmd": 7000,
+				"request": {
+					"round": ["*battle_round", 0]
+				}
+			},
+			"battle_init": {
+				"cmd": 7001,
+				"request": {
+					"type": ["int", 0],
+					"id": ["int", 1],
+					"manual": ["int", 2],
+					"entitys": ["*entity_data", 3],
+					"cfg": ["battle_cfg", 4],
+					"lineup": ["*battle_lineup_data", 5]
+				}
+			},
+			"treasure_spellres_info": {
+				"cmd": 5401,
+				"request": {
+					"useSpells": ["*spellsAttr", 0],
+					"spellsList": ["*spellsData", 1],
+					"num": ["int", 2],
+					"perfectNum": ["int", 3]
+				}
+			},
+			"bag_deal_smelt_result": {
+				"cmd": 409,
+				"request": {
+					"state": ["int", 0],
+					"goldCount": ["int", 1],
+					"len": ["int", 2]
+				}
+			},
+			"equip_update_data": {
+				"cmd": 501,
+				"request": {
+					"roleID": ["int", 0],
+					"equipPos": ["int", 1],
+					"data": ["item_data", 2],
+					"reddata": ["equip_red_data", 3]
+				}
+			},
+			"deity_equip_update_data": {
+				"cmd": 502,
+				"request": {
+					"roleID": ["int", 0],
+					"equipPos": ["int", 1],
+					"equipDatas": ["equip_data_red", 2]
+				}
+			},
+			"arena_pk_result":{
+				"cmd": 13001,
+				"request": {
+					"result": ["int", 0],
+					"rewards": ["*reward_data", 1],
+					"iskill": ["boolean", 2],
+					"maxrank": ["int", 3],
+					"lastmaxrank": ["int", 4],
+					"rank": ["int", 5],
+					"lastrank": ["int", 6],
+					"rewardCount":["int", 7]
+				}
+			},
+			"god_soul_data_init": {
+				"cmd": 4001,
+				"request": {
+					"list": ["*array_info", 0]
+				}
+			},
+			"god_soul_data_update": {
+				"cmd": 4002,
+				"request": {
+					"arrayinfo": ["array_info", 0]
+				}
+			},
+			"team_info_request":
+			{
+				"cmd":17001,
+				"request": {
+					"members":["*crossteam_member",0],
+					"leaderId":["int", 1],
+					"raidType":["int", 2],
+					"lv":["int", 3],
+					"needPower":["int", 4]
+				}
+			},
+			"team_list":
+			{
+				"cmd":17002,
+				"request": {
+					"members":["*team_data",0],
+					"raidType":["int", 1],
+					"lv":["int", 2]
+				}
+			},
+			"crossteam_reward":
+			{
+				"cmd":130,
+				"request": {
+					"members":["*fb_clear_count",0],
+					"count":["int", 0]
+				}
+			},
+			"kfboss_update_info":
+			{
+				"cmd":2102,
+				"request": {
+					"shieldvalue":["int",0],
+					"hp":["int",1],
+					"hpperc":["int",2]
+				}
+			},
+			"kfboss_player_dead":
+			{
+				"cmd":2105,
+				"request": {
+					"deadtime":["int",0]
+				}
+			},
+			"kfboss_rank_inf":
+			{
+				"cmd":2106,
+				"request": {
+					"playerranks":["*kfboss_member_data",0],
+					"guildranks":["*kfboss_member_data",1],
+					"mydamage":["int",2],
+					"myrank":["int",3]
+				}
+			},
+			"kfboss_first_inf":
+			{
+				"cmd":2108,
+				"request": {
+					"firstinfo":["kfboss_first_info",0],
+					"playerranks":["*kfboss_member_data",1],
+					"guildranks":["*kfboss_member_data",2],
+					"mydamage":["int",3],
+					"myrank":["int",4]
+				}
+			},
+			"kfboss_report":
+			{
+				"cmd":2111,
+				"request": {
+					"persondetail":["kfboss_report_persondetail",0],
+					"rewards":["reward_data",1],
+					"auctionrewards":["reward_data",2],
+					"sharedata":["kfboss_report_sharedata",3]
+				}
+			},
+			"mail_init": {
+				"cmd": 901,
+				"request": {
+					"mailData": ["*mail_data", 0]
+				}
+			},
+			"mail_detail": {
+				"cmd": 902,
+				"request": {
+					"mailData": ["mail_data", 0],
+					"text": ["string", 1],
+					"rewardData": ["*reward_data", 2]
+				}
+			},
+			"mail_delete": {
+				"cmd": 903,
+				"request": {
+					"handle": ["int", 0]
+				}
+			},
+			"mail_update": {
+				"cmd": 904,
+				"request": {
+					"updateData": ["*mail_update_data", 0],
+					"showWarnBagSpace": ["boolean", 1]
+				}
+			},
+			"mail_add": {
+				"cmd": 905,
+				"request": {
+					"mailData": ["mail_data", 0]
+				}
+			},
+			"kingsport_inf":{
+				"cmd":3501,
+				"request":{
+					"isOpen": ["int", 0],
+					"grade": ["int", 1],
+					"star": ["int", 2],
+					"challgeNum": ["int", 3],
+					"challgeCd": ["int", 4],
+					"winNum": ["int", 5],
+					"lianWin": ["boolean", 6],
+					"playUpTime": ["boolean", 7],
+					"isCanReward": ["boolean", 8],
+					"upGrade": ["int", 9],
+					"upStar": ["int", 10],
+					"upWin": ["int", 11],
+					"rank":["int", 12],
+					"ladderType":["int", 13],
+					"canJoin": ["boolean", 14],
+					"csName": ["string", 15],
+					"csServerId":["int", 16],
+					"csJob":["int", 17],
+					"csSex":["int", 18]
+				}
+			},
+			"kingsport_player_back":
+			{
+				"cmd":3502,
+				"request":{
+					"type":["boolean",0],
+					"id":["int",1],
+					"name":["string",2],
+					"job":["int",3],
+					"sex":["int",4],
+					"grade":["int",5],
+					"star":["int",6],
+					"ladderType":["int",7],
+					"serverid":["int",8]
+				}
+			},
+			"kingsport_result":{
+				"cmd":3503,
+				"request":{
+					"isWin":["boolean",0],
+					"rewardData":["*reward_data",1],
+					"grade":["int",2],
+					"star":["int",3],
+					"increaseStar":["int",4],
+					"ladderType":["int",5]
+				}
+			},
+			"kingrank_list":{
+				"cmd":3505,
+				"request":{
+					"rankData":["*rank_data_ladder",1],
+					"upWeekRankList":["*rank_data_ladder",2],
+					"ladderType":["int",3],
+					"rank":["int",4],
+					"upWeekRank":["int",5]
+				}
+			},
+			"kingsport_buycount":{
+				"cmd":3506,
+				"request":{
+					"todayBuyTime":["int",0],
+					"ladderType":["int",1],
+					"challgeNum":["int",2]
+				}
+			},
+			"attainment_update": {
+				"cmd": 3201,
+				"request": {
+					"taskinfos": ["*attainment_task", 0]
+				}
+			},
+			"title_update": {
+				"cmd": 920,
+				"request": {
+					"auctionlist": ["*int", 0],
+					"limitlist": ["*timelist", 1]
+				}
+			},
+			"guildwar_playerinfo":
+			{
+				"cmd":27001,
+				"request": {
+					"barruerId":["int",0],
+					"through":["boolean",1],
+					"reborntime":["int",2],
+					"attacktime":["int",3],
+					"rankData":["guildwar_rank_data",4]
+				}
+			},
+			"guildwar_guildinfo":
+			{
+				"cmd":27002,
+				"request": {
+					"barrierId":["int",0],
+					"playerNum":["int",1],
+					"throughNum":["int",2],
+					"rankData":["guildwar_rank_data",3]
+				}
+			},
+			"guildwar_guildrank":
+			{
+				"cmd":27003,
+				"request": {
+					"barrierId":["int",0],
+					"guildinfos":["*guildwar_guild_info",1]
+				}
+			},
+			"guildwar_player_rank":
+			{
+				"cmd":27004,
+				"request": {
+					"barrierId":["int",0],
+					"rankInfos":["*guildwar_player_data",1]
+				}
+			},
+			"guildwar_barrierinfo":
+			{
+				"cmd":27005,
+				"request": {
+					"barrierId":["int",0],
+					"playerNum":["int",1]
+				}
+			},
+			"guildwar_bossinfo":
+			{
+				"cmd":27006,
+				"request": {
+					"barrierId":["int",0],
+					"shield":["int",1],
+					"hp":["int",2],
+					"recovertime":["int",3]
+				}
+			},
+			"guildwar_guardinfo":
+			{
+				"cmd":27007,
+				"request": {
+					"guardtype":["int",0],
+					"holdtime":["int",1],
+					"resistNum":["int",2],
+					"hp":["int",3],
+					"guardinfos":["*guildwar_guard_info",4],
+					"ownerGuildId":["int",5]
+				}
+			},
+			"guildwar_fourkinginfo":
+			{
+				"cmd":27008,
+				"request": {
+					"bossinfos":["*guildwar_king_data",0]
+				}
+			},
+			"guildwar_player_globalinfo":
+			{
+				"cmd":27009,
+				"request": {
+					"reborntime":["int",0],
+					"score":["int",1],
+					"scoreRank":["int",2],
+					"kill":["int",3],
+					"killRank":["int",4],
+					"rewardMark":["int",5],
+					"endtime":["int",6],
+					"worldlevel":["int",7]
+				}
+			},
+			"guildwar_myguild_globalinfo":
+			{
+				"cmd":27010,
+				"request": {
+					"playerNum":["int",0],
+					"score":["int",1],
+					"scoreRank":["int",2]
+				}
+			},
+			"king_report":
+			{
+				"cmd":27018,
+				"request": {
+					"persondetail":["*kingreport_person_detail",0],
+					"rewards":["*reward_data",1],
+					"sharedata":["king_report_share_data",2]
+				}
+			},
+			"guildwar_allguild_rankinfo":
+			{
+				"cmd":27030,
+				"request": {
+					"rankinfos":["*guildwar_guild_info",0]
+				}
+			},
+			"guildwar_allplayer_rankinfo":
+			{
+				"cmd":27031,
+				"request": {
+					"killrank":["*guildwar_player_data",0],
+					"injurerank":["*guildwar_player_data",1],
+					"scorerank":["*guildwar_player_data",2]
+				}			
+			},
+			"guildwar_enter_dragonguild":
+			{
+				"cmd":27035,
+				"request": {
+					"guildinfos":["*guildwar_guild_info",0],
+					"countdown":["int",1]
+				}
+			},
+			"guildwar_ultimate_attack":
+			{
+				"cmd":27036,
+				"request": {
+					"countdown"	:["int",0]			
+				}
+			},
+			"guildwar_enter_warguild":
+			{
+				"cmd":27041,
+				"request": {
+					"championGuild":["guildwar_guild_info",0],
+					"guildinfos":["*guildwar_guild_info",1]				
+				}
+			},
+			"guildwar_report":
+			{
+				"cmd":27042,
+				"request": {
+					"guilddetail":["guildwar_report_guild_detail",0],
+					"rewards":["*reward_data",1],
+					"auctionrewards":["*reward_data",2],
+					"sharedata":["guildwar_report_share_data",3]
+				}
+			},
+			"map_enter":{
+				"cmd":23001,
+				"request":{
+					"mapid":["int",0],
+					"x":["int",1],
+					"y":["int",2],
+					"myself":["map_player",3],
+					"entitylist":["*map_player",4]
+				}
+			},
+			"map_other_enter":{
+				"cmd":23002,
+				"request":{
+					"entity":["map_player",0],
+					"mapid":["int",1]
+				}
+			},
+			"map_other_leave":{
+				"cmd":23003,
+				"request":{
+					"id":["int",0],
+					"mapid":["int",1]
+				}
+			},
+			"map_other_move":{
+				"cmd":23004,
+				"request":{
+					"id":["int",0],
+					"x":["int",1],
+					"y":["int",2],
+					"mapid":["int",3]
+				}
+			},
+			"map_other_fly":{
+				"cmd":23005,
+				"request":{
+					"id":["int",0],
+					"x":["int",1],
+					"y":["int",2],
+					"mapid":["int",3]
+				}
+			},
+			"map_player_status":{
+				"cmd":23006,
+				"request":{
+					"id":["int",0],
+					"status":["int",1],
+					"mapid":["int",2]
+				}
+			},
+			"map_player_update":
+			{
+				"cmd":23007,
+				"request":{
+					"id":["int",0],
+					"mapid":["int",1],
+					"player":["map_player",2]
+				}
+			},
+			"fuben_eightone_hardinfo":
+			{
+				"cmd":28001,
+				"request":{
+					"clear":["int",0],
+					"helpreward":["int",1],
+					"buy":["*eight_one_hard_data",2],
+					"totalclearlist":["*eight_one_hard_data",3]
+				}
+			},
+			"fuben_eightone_hard_info_update":
+			{
+				"cmd":28002,
+				"request":{
+					"todaylist":["*eight_one_hard_data",3]
+				}
+			}
+		},
+		"struct": {
+			"attribute_data": {
+				"type": ["int", 0],
+				"value": ["int", 1],
+				"quality": ["int", 2]
+			},
+			"equip_data": {
+				"strengthen": ["int", 0],
+				"refine": ["int", 1],
+				"anneal": ["int", 2],
+				"gem": ["int", 3],
+				"item": ["equip_item_data", 4],
+				"reddata": ["equip_red_data", 5],
+				"castsoulattr": ["int", 6],
+				"nestringoulattr": ["int", 7],
+				"fumoLv": ["int", 8],
+				"upLv": ["int", 9],
+				"carveLv": ["int", 10],
+				"skillId": ["int", 11],
+				"extraSkillId": ["int", 12],
+				"attrs": ["*attribute_data", 13],
+				"count": ["int", 14],
+				"quench": ["int", 15]
+			},
+			"equip_item_data": {
+				"id": ["int", 0],
+                "attrs": ["*attribute_data", 1],
+                "starattrs": ["*attribute_data", 2]
+			},
+			"equip_red_data": {
+				"injectstage": ["int", 0],
+				"injectcount": ["int", 1]
+			},
+			"equip_data_red": {
+				"item": ["equip_item_data", 0],
+				"injectstage": ["int", 1],
+				"injectcount": ["int", 2],
+				"soullevel": ["int", 3],
+				"suitlevel": ["int", 4],
+				"refineAttr": ["*attribute_data", 5],
+				"refineStoreAttr": ["*attribute_data", 6]
+			},
+			"luck_record": {
+				"name": ["string", 0],
+                "reward": ["reward_data", 1],
+                "time": ["int", 2]
+			},
+			"item_data": {
+				"handle": ["int", 0],
+				"id": ["int", 1],
+				"count": ["int", 2],
+				"attrs": ["*attribute_data", 3],
+				"invalidtime": ["int", 4],
+				"starattrs": ["*attribute_data", 5],
+				"lock": ["int", 6],
+				"otherdatas": ["item_other_data", 7]
+			},
+			"item_other_data": {
+				"type01": ["other_data_type01", 0],
+				"type02": ["other_data_type02", 1],
+				"type03": ["other_data_type03", 2],
+				"type04": ["other_data_type04", 3],
+				"type05": ["other_data_type05", 4],
+				"type06": ["other_data_type06", 5]
+			},
+			"other_data_type01": {
+				"awakenCount": ["int", 0],
+				"destiny": ["*int", 1]        
+			},
+			"other_data_type02": {
+				"propsid": ["int", 0],
+				"lv": ["int", 1],
+				"degree": ["int", 2],
+				"fumo": ["*attribute_data", 3],
+				"starattrs": ["*attribute_data", 4],
+				"id": ["int", 5]
+			},
+			"other_data_type03": {
+				"recharge": ["int", 0]
+			},
+			"other_data_type04": {
+				"level": ["int", 0],
+				"exp": ["int", 1]
+			},
+			"other_data_type05": {
+				"talentData": ["*attribute_data", 0]
+			},
+			"other_data_type06": {
+				"lv": ["int", 0],
+				"star": ["int", 1],
+				"exp": ["int", 2],
+				"equip": ["int", 3]
+			},
+			"dailyTask_data": {
+				"no": ["int", 0],
+                "num": ["int", 1]
+			},
+			"otherActivity_monster": {
+                "monsterList": ["*int", 0],
+                "num": ["int", 1],
+                "time": ["int", 2],
+                "reward": ["int", 3]
+			},
+			"otherActivity_data": {
+				"num": ["int", 0],
+                "reward": ["int", 1]
+			
+			},
+			"field_boss_info": {
+                "id": ["int", 0],
+                "hp": ["int", 1],
+                "status": ["int", 2],
+                "ownerId": ["int", 3],
+                "ownerName": ["string", 4],
+                "ownerSex": ["int", 5],
+                "ownerJob": ["int", 6],
+                "time": ["int", 7],
+                "ischallenge": ["boolean", 8]
+            },
+            "public_boss_info": {
+                "id": ["int", 0],
+                "hp": ["int", 1],
+                "iskill": ["boolean", 2],
+                "reborntime": ["int", 3],
+                "fightnum": ["int", 4],
+                "reborn": ["boolean", 5]
+            },
+            "public_attack_info": {
+                "name": ["string", 0],
+                "injure": ["int", 1]
+            },
+            "public_kill_info": {
+                "name": ["string", 0],
+                "power": ["int", 1],
+                "killtime": ["int", 2]
+            },
+            "vipboss_info": {
+                "id": ["int", 0],
+                "count": ["int", 1],
+                "daycount": ["int", 2]
+			},
+			"chat_data":{
+				"type":["int", 0],
+				"id": ["int", 1],
+				"name": ["string", 2],
+				"job": ["int", 4],
+				"sex": ["int", 5],
+				"vip":["int", 6],
+				"str":["string", 7],
+				"serverid": ["int", 8],
+				"shareId":["int", 9],
+				"share":["share_date", 10],
+				"time":["int", 11],
+				"headframe": ["int", 12],
+				"honorLv":["int", 13]
+			},
+			"share_date":{
+				"shareId": ["int", 0],
+				"showInfo": ["*client_chat_param", 1],
+				"player": ["*player_data", 2]
+			},
+			"blue_info":{
+				"is_blue_vip": ["int", 0],
+				"is_blue_year_vip": ["int", 1],
+				"is_super_blue_vip": ["int", 2],
+				"is_expand_blue_vip": ["int", 3],
+				"blue_vip_level": ["int", 4]
+			},
+			"client_chat_param":{
+				"type": ["int", 0],
+				"value": ["int", 1],
+				"strvalue": ["string", 2],
+				"valueEx": ["int", 3]
+			},
+			"player_data":{
+				"name": ["string", 0],
+				"id": ["int", 1],
+				"vip": ["int", 2],
+				"guildid": ["int", 3],
+				"guildName": ["string", 4]
+			},
+			"guild_summary":{
+				"id": ["int", 0],
+				"level": ["int", 1],
+				"playercount": ["int", 2],
+				"name": ["string", 3],
+				"leaderinfo": ["member_info", 4],
+				"needPower": ["int", 5],
+				"totalpower": ["int", 6]
+			},
+			"member_info":{
+				"playerid": ["int", 0],
+				"playername": ["string", 1],
+				"office": ["int", 2],
+				"job": ["int", 3],
+				"sex": ["int", 4],
+				"vip": ["int", 5],
+				"contribute": ["int", 8],
+				"todayContri": ["int", 9],
+				"curcontribute": ["int", 10],
+				"power": ["int", 11],
+				"logouttime": ["int", 12]
+			},
+			"other_guild_info":{
+				"level": ["int", 0],
+				"fund": ["int", 1],
+				"notice": ["string", 2],
+				"autoJoin": ["int", 3],
+				"needPower": ["int", 4]
+			},
+			"guild_record":{
+				"type": ["int", 0],
+				"historyRecord": ["guild_history", 1],
+				"chatRecord": ["guild_chat", 2]
+			},
+			"guild_history":{
+				"time": ["int", 0],
+				"type": ["int", 1],
+				"param1": ["int", 2],
+				"param2": ["int", 3],
+				"param3": ["int", 4],
+				"name1": ["string", 5],
+				"name2": ["string", 6]
+			},
+			"guild_chat":{
+				"type": ["int", 0],
+				"content": ["string", 1],
+				"playerid": ["int", 2],
+				"name": ["string", 3],
+				"job": ["int", 4],
+				"sex": ["int", 5],
+				"vip": ["int", 6],
+				"office": ["int", 7],
+				"time": ["int", 8],
+				"share": ["share_date", 9],
+				"headframe": ["int", 10]
+			},
+			"role_data":{
+				"power": ["int", 0],
+				"skillDatas": ["*int", 1],
+				"skillSortDatas": ["*int", 2],
+				"equipsData": ["*equip_data", 3],
+				"attributeData": ["*int", 4],
+				"attributeExData": ["*int", 5],
+				"equipsRedData": ["*equip_data_red", 6],
+				"hotohoripower": ["int", 7],
+				"ringpower": ["int", 8],
+				"xianqipower": ["int", 9],
+				"xianqimaxstar": ["int", 10],
+				"destinypower": ["int", 11],
+				"bladeSoulPower": ["int", 12],
+				"lineuppower": ["int", 13],
+				"entitysPower": ["*int", 14]
+			},
+			"facade_data": {
+				"exchangeInfo": ["exchange_info", 0]
+			},
+			"exchange_info": {
+				"refreshTime": ["int", 0],
+				"refreshCount": ["int", 1],
+				"exchangeList": ["*int", 2],
+				"guildBag": ["*guild_bag", 3],
+				"exchangeMark": ["int", 4]
+			},
+			"guild_bag": {
+				"id": ["int", 0],
+				"count": ["int", 1]
+			},
+			"guild_apply":{
+				"playerid": ["int", 0],
+				"vip": ["int", 1],
+				"job": ["int", 2],
+				"sex": ["int", 3],
+				"power": ["int", 4],
+				"playername": ["string", 5],
+				"level": ["int", 6],
+				"logouttime": ["int", 7]
+			},
+			"skill_info":{
+				"posId": ["int", 0],
+				"level": ["int", 1]
+			},
+			"guild_skill_config":{
+				"curConfig": ["guild_skill_config_data", 2],
+				"nextConfig": ["guild_skill_config_data", 3]
+			},
+			"guild_skill_config_data":{
+				"level": ["int", 0],
+				"posId": ["int", 1],
+				"attrpower": ["*guild_skill_attr", 2],
+				"cost": ["reward_data", 3]
+			},
+			"guild_skill_attr":{
+				"type": ["int", 0],
+				"value": ["int", 1]
+			},
+			"peach_record":{
+				"time": ["int", 0],
+				"peachId": ["int", 1],
+				"playerName": ["string", 2]
+			},
+			"protector_task_info":{
+				"taskId": ["int", 0],
+				"count": ["int", 1]
+			},
+			"guildboss_firstinfo":{
+				"name": ["string", 0],
+				"serverid": ["int", 1],
+				"guildid": ["int", 2],
+				"guildname": ["string", 3],
+				"damage": ["int", 4]
+			},
+			"guildboss_rank":{
+				"name": ["string", 0],
+				"serverid": ["int", 1],
+				"damage": ["int", 2],
+				"job": ["int", 3],
+				"sex": ["int", 4]
+			},
+			"team_data":{
+				"leaderid": ["int", 0],
+				"count": ["int", 1],
+				"members": ["*member_data", 2],
+				"needpower": ["int", 3]
+			},
+			"member_data":{
+				"dbid": ["int", 0],
+				"power": ["int", 1],
+				"name": ["string", 2],
+				"level": ["int", 3],
+				"job": ["int", 4],
+				"sex": ["int", 5]
+			},
+            "rank_data_list": {
+                "pos": ["int", 0],
+                "id": ["int", 1],
+                "name": ["string", 2],
+                "level": ["int", 3],
+                "serverid": ["int", 4],
+                "job": ["int", 5],
+                "sex": ["int", 6],
+                "vip": ["int", 7],
+                "skin": ["int", 8],
+                "power": ["int", 9],
+                "outpet": ["int", 10],
+                "outxianlv": ["int", 11],
+                "outride": ["int", 12],
+                "outwing": ["int", 13],
+                "outfairy": ["int", 14],
+                "outweapon": ["int", 15],
+                "outtiannv": ["int", 16],
+                "outtianshen": ["int", 17],
+                "outcircle": ["int", 18],
+                "outposition": ["int", 19],
+                "outpsychic": ["int", 20],
+                "outsoul": ["int", 21],
+                "outflower": ["int", 22],
+                "outnimbus": ["int", 23],
+                "chapterlevel": ["int", 24],
+                "lv": ["int", 25],
+                "outbaby": ["int", 26],
+                "outbabysex": ["int", 27],
+                "score": ["int", 28],
+                "outhotohori": ["int", 29],
+                "bladeSoul": ["int", 30],
+                "mlValue": ["int", 31],
+                "isMutate": ["boolean", 32],
+				"outyuling": ["int", 33],
+				"guildName": ["string", 34]
+			},
+			"ranking_list":{
+				"name": ["string", 0],
+				"rank": ["int", 1],
+				"value": ["int", 2]
+			},
+            "fuben_data": {
+                "fubenNo": ["int", 0],
+                "clearanceNum": ["int", 1],
+                "todayNum": ["int", 2],
+                "buyNum": ["int", 3]
+            },
+            "treasuremapn_data": {
+                "fubenNo": ["int", 0],
+                "todayNum": ["int", 1],
+                "star": ["int", 2]
+            },
+            "star_reward_data": {
+                "no": ["int", 0],
+                "reward": ["int", 1]
+            },
+            "anabasis_attack": {
+                "category": ["int", 0],
+                "outbound": ["*outbound", 1],
+                "lock": ["*boolean", 2],
+                "hp": ["*int", 3]
+            },
+            "anabasis_barrier": {
+                "barrier": ["int", 0],
+                "pass": ["int", 1],
+                "enemydata": ["anabasis_enemydata", 2],
+                "passreward": ["anabasis_rewards", 3],
+                "drawbin": ["int", 4]
+            },
+            "anabasis_enemydata": {
+                "enemytype": ["int", 0],
+                "entity": ["*anabasis_entity_data", 1],
+                "robbot": ["*anabasis_robbot_data", 2]
+            },
+            "anabasis_rewards": {
+                "rewardtype": ["int", 0],
+                "rewards": ["*reward_data", 1],
+                "buffs": ["*int", 2],
+                "buffrefresh": ["int", 3],
+                "index": ["int", 4]
+            },
+            "anabasis_entity_data": {
+                "category": ["int", 0],
+                "hp": ["int", 1],
+                "id": ["int", 2],
+                "level": ["int", 3],
+                "playerdata": ["player_whole_data", 4]
+            },
+            "player_whole_data": {
+                "name": ["int", 0],
+                "job": ["int", 1],
+                "sex": ["int", 2],
+                "vip": ["int", 3],
+                "level": ["int", 4],
+                "power": ["int", 5],
+                "offlineTime": ["int", 6],
+                "guildId": ["int", 7],
+                "guildName": ["string", 8],
+                "dbid": ["int", 9],
+                "headframe": ["int", 10],
+                "honorLv": ["int", 11],
+                "serverid": ["int", 12]
+            },
+            "anabasis_robbot_data": {
+                "monid": ["int", 0],
+                "pos": ["int", 1],
+                "hp": ["int", 2],
+                "power": ["int", 3]
+            },
+            "shop_data": {
+                "type": ["int", 0],
+				"datas": ["*int", 1],
+				"limittime": ["*int", 2]
+            },
+            "mystical_shop_data": {
+                "id": ["int", 0],
+                "buycount": ["int", 1]
+			},
+			"props_data":{
+				"id": ["int", 0],
+                "count": ["int", 1]
+			},
+            "mystical_config_data": {
+                "index": ["int", 0],
+                "id": ["int", 1],
+                "count": ["int", 2],
+                "daycount": ["int", 3],
+                "currency": ["reward_data", 4],
+                "oriprice": ["reward_data", 5],
+                "discount": ["string", 6],
+                "score": ["reward_data", 7]
+            },
+            "shop_unlock_data": {
+                "type": ["int", 0],
+                "value": ["int", 1]
+            },
+            "wildgeeseFb_config": {
+                "id": ["int", 0],
+                "monsterId": ["int", 1],
+                "degree": ["int", 2],
+                "firstAwardshow": ["*reward_data", 3]
+            },
+			"task_data": {
+				"id": ["int", 0],
+                "status": ["int", 1],
+                "progress": ["task_progress_data", 2],
+                "taskConfig": ["task_config", 3]
+			},
+			"task_progress_data": {
+				"value": ["int", 0]
+			},
+			"task_config": {
+				"id": ["int", 0],
+                "condition": ["task_cond_data", 2],
+                "nextid": ["int", 5],
+                "desc": ["string", 6],
+                "reward": ["*reward_data", 7],
+                "guide": ["int", 8],
+                "guideAward": ["int", 9],
+                "guidecount": ["int", 10],
+                "param": ["*int", 11],
+                "npc": ["int", 12],
+                "action": ["*task_action", 13],
+                "action2": ["*task_action", 14],
+                "scene": ["int", 15],
+                "scene2": ["int", 16]
+			},
+			"task_cond_data": {
+				"type": ["int", 0],
+                "value": ["int", 1]
+			},
+			"task_action": {
+				"type": ["int", 0],
+                "value": ["int", 1],
+                "param": ["string", 2]
+			},
+			"entity_data": {
+				"uid": ["int", 0],
+                "id": ["int", 1],
+                "type": ["int", 2],
+                "side": ["int", 3],
+                "pos": ["int", 4],
+                "attrs": ["*int", 5],
+                "shows": ["entity_shows", 6]
+			},
+			"entity_shows": {
+				"shows": ["*int", 0],
+				"id": ["int", 1],
+				"name": ["string", 2],
+				"sex": ["int", 3],
+				"job": ["int", 4]
+			},
+			"battle_cfg": {
+				"id": ["int", 0],
+                "manuallymode": ["int", 1],
+                "jbutton": ["int", 2],
+                "type": ["int", 3],
+                "totalTime": ["int", 4],
+                "closeTime": ["int", 5],
+                "scenes": ["*int", 6],
+                "name": ["string", 7],
+                "desc": ["string", 8],
+                "skipbattle": ["int", 9]
+			},
+			"battle_round": {
+				"round": ["int", 0],
+				"turns": ["*battle_turn", 1]
+			},
+			"battle_turn": {
+				"id": ["int", 0],
+				"events": ["*battle_event", 1]
+			},
+			"battle_event": {
+				"type": ["int", 0],
+				"source": ["int", 1],
+				"targets": ["*int", 2],
+				"id": ["int", 3],
+				"hps": ["*int", 4],
+				"params": ["*int", 5]
+			},
+			"spellsAttr": {
+				"spellsNo": ["int", 0],
+				"lv": ["int", 1],
+				"skillList": ["*int", 2],
+				"xlattrs": ["*attribute_data", 4],
+				"tunshilv": ["int", 5],
+				"tunshiexp": ["int", 6],
+				"qilingno": ["int", 7],
+				"qilinglv": ["int", 8],
+				"qilingexp": ["int", 9]
+			},
+			"spellsData": {
+				"spellsId": ["int", 0],
+				"spellsNo": ["int", 1],
+				"lock": ["int", 2],
+				"skillList": ["*int", 3],
+				"xlattrs": ["*attribute_data", 4],
+				"tunshilv": ["int", 5],
+				"tunshiexp": ["int", 6],
+				"qilingno": ["int", 7],
+				"qilinglv": ["int", 8],
+				"qilingexp": ["int", 9]
+			},
+			"SpellsInfo": {
+				"spellsId": ["int", 0],
+				"spellsNo": ["int", 1],
+				"skillList": ["*int", 2]
+			},
+			"reward_data": {
+                "type": ["int", 0],
+                "id": ["int", 1],
+                "count": ["int", 2]
+            },
+			"chapter_mondata": {
+				"id": ["int", 0],
+                "name": ["string", 1],
+                "level": ["int", 3],
+                "hp": ["int", 4],
+                "atk": ["int", 5],
+                "def": ["int", 6],
+                "crit": ["int", 8],
+                "tough": ["int", 9],
+                "avatar": ["int", 13],
+                "head": ["string", 14],
+                "talk": ["string", 15],
+                "warname": ["int", 16]
+			},
+			"monster_data": {
+				"configId": ["int", 0],
+                "name": ["sting", 1],
+                "level": ["int", 2],
+                "avatar": ["int", 3],
+                "talk": ["string", 4]
+			},
+			"xianlv_info": {
+				"id": ["int", 0],
+                "exp": ["int", 1],
+                "level": ["int", 2],
+                "star": ["int", 3],
+				"tupo": ["int", 4],
+				"spiritLv": ["int", 5],
+                "promoteLv": ["int", 6],
+                "equip": ["*int", 7],
+                "hougyoku": ["*hougyoku_data", 8],
+				"temp_hougyoku": ["*hougyoku_data", 9]
+			},
+			"hougyoku_data": {
+				"id": ["int", 0],
+                "quality": ["int", 1],
+                "aura": ["int", 2],
+                "attr": ["*attribute_data", 3],
+				"skill": ["int", 4]
+			},
+			"equipment": {
+				"did": ["int", 0],
+                "id": ["int", 1],
+                "lv": ["int", 2],
+                "star_lv": ["int", 3],
+				"star_exp": ["int", 4],
+				"equip_id": ["int", 5]
+			},
+			"rune_info": {
+				"slot": ["int", 0],
+                "runelevel": ["int", 1]
+			},
+			"soulrootInfo": {
+				"level": ["int", 0],
+                "attrs": ["*attribute_data", 1],
+                "cost": ["*reward_data", 2]
+			},
+			"bodyInfo": {
+				"grade": ["int", 0],
+                "level": ["int", 1],
+                "attrs": ["*attribute_data", 2],
+                "cost": ["*reward_data", 3]
+			},
+			"runeStouRefInfo": {
+				"slot": ["int", 0],
+                "stoulv": ["int", 1],
+                "reflv": ["int", 2],
+                "refnum": ["int", 3]
+			},
+			"rune_info1": {
+				"slot": ["int", 0],
+                "runelevel": ["int", 1]
+			},
+			"soulrootInfo1": {
+				"level": ["int", 0],
+                "attrs": ["*attribute_data", 1],
+                "cost": ["*reward_data", 2]
+			},
+			"pet_info": {
+				"petid": ["int", 0],
+				"level": ["int", 1],
+				"grow_lv": ["int", 2],
+				"max_skill_num": ["int", 3],
+				"buffs": ["*int", 4],
+				"lock_pos": ["*int", 5],
+				"savvyinfo": ["petSavvy", 6]
+			},
+			"petSavvy": {
+				"by": ["boolean", 0],
+				"count": ["int", 1],
+				"attrs": ["*structAttributeData", 2],
+				"storage": ["*structAttributeData", 3]
+			},
+			"structAttributeData": {
+				"type": ["int", 0],
+				"value": ["int", 1]
+			},
+			"brother_data": {
+				"no": ["int", 0],
+				"validtime": ["int", 1],
+				"permanent": ["boolean", 2]
+			},
+			"tiannv_equip_data": {
+				"washNum": ["int", 0],
+				"attrData": ["*tiannv_attrs_data", 1],
+				"washData": ["*tiannv_attrs_data", 2]
+			},
+			"tiannv_attrs_data": {
+				"type": ["int", 0],
+				"attrs": ["int", 1],
+				"skillNo": ["int", 2]
+			},
+			"level_exp_data": {
+				"level": ["int", 0],
+				"exp": ["int", 1]
+			}
+			,
+			"arena_target_data":
+			{
+				"id":["int",0],
+				"iskill":["boolean",1],
+				"rank":["int",2],
+				"power":["int",3],
+				"name":["string",4],
+				"lv":["int",5]
+			}
+			,
+			"rank_data":{
+				"id":["int",0],
+				"name":["string",1],
+				"rank":["int",2],
+				"value":["int",3]
+			},
+			"activity_data_collection":{
+				"type01":["activity_type01",1],
+				"type07":["activity_type07",7],
+				"type08":["activity_type08",8],
+				"type17":["activity_type17",17],
+				"type19":["activity_type19",19],
+				"type22":["activity_type22",22],
+				"type24":["activity_type24",24],
+				"type34":["activity_type34",34],
+				"type101":["activity_type101",101]
+
+				
+			},
+			"activity_type01":{
+				"baseData":["activity_base_type",0],
+				"reward":["*int",1]
+			},
+			"activity_type07":{
+				"baseData":["activity_base_type",0],
+				"reward":["*int",1],
+				"people":["int",2],
+				"rechargeNum":["int",3]
+			},
+			"activity_type08":{
+				"baseData":["activity_base_type",0],
+				"reward":["*int",1]
+			},
+			"activity_type17":{
+				"baseData":["activity_base_type",0],
+				"reward":["*int",1],
+				"day":["int",2],
+				"nowNum":["*int",3]
+			},
+			"activity_type19":{
+				"baseData":["activity_base_type",0],
+				"runday":["int",1],
+				"reward":["*int",2]
+			},
+			"activity_type22":{
+				"baseData":["activity_base_type",0],
+				"gid":["int",1],
+				"reward":["*int",2]
+			},
+			"activity_type24":{
+				"baseData":["activity_base_type",0],
+				"reward":["*int",1]
+			},
+			"activity_type34":{
+				"baseData":["activity_base_type",0],
+				"luckValue":["int",1],
+				"free":["boolean",2],
+				"noticeList":["*activity_notice",3]
+			},
+			"activity_type101":{
+				"baseData":["activity_base_type",0],
+				"rechargeMoney":["int",1],
+				"rewards":["*int",2]
+			},
+			"activity_base_type":{
+				"id":["int",0],
+				"startTime":["int",1],
+				"endTime":["int",2],
+				"type":["int",3],
+				"openState":["int",4]
+			},
+			"catch_escort_info":{
+				"robId":["int",0],
+				"name":["string",1],
+				"isWin":["boolean",2],
+				"guildName":["string",3]
+			},
+			"record_info":{
+				"recordId":["int",0],
+				"type":["int",1],
+				"quality":["int",2],
+				"time":["int",3],
+				"playerId":["int",4],
+				"name":["string",5],
+				"isWin":["boolean",6],
+				"operate":["boolean",7],
+				"power":["int",8],
+				"level":["int",9]
+			},
+			"escort_info":{
+				"quality":["int",0],
+				"power":["int",1],
+				"playerName":["string",2],
+				"playerid":["int",3],
+				"catchCount":["int",4],
+				"finishTime":["int",5],
+				"guildName":["string",6],
+				"robMark":["boolean",7]
+			},
+			"AuctionItem":{
+				"id":["int",0],
+				"itemid":["int",1],
+				"count":["int",2],
+				"price":["int",3],
+				"offername":["string",4],
+				"dealtime":["int",5],
+				"dealprice":["int",6],
+				"addprice":["int",7]
+			},
+			"array_info":{
+				"id":["int",0],
+				"level":["int",1]
+			}
+			,
+			"crossteam_member":
+			{
+				"id":["int",0],
+				"power":["int",1],
+				"name":["string",2],			
+				"lv":["int",3],
+				"parnterTy":["int",4],
+				"parnterId":["int",5],
+				"identify":["int",6]
+			},
+			"fb_clear_count":
+			{
+				"level":["int",0],
+				"count":["int",1]
+			},
+			"kfboss_firstinfo":{
+				"name":["string",0],
+				"serverid":["int",1],
+				"guildid":["int",2],
+				"guildname":["sring",3],
+				"damage":["int",4]
+			},
+			"kfboss_report_persondetail":{
+				"rank":["int",0]
+			},
+			"kfboss_report_sharedata":
+			{
+				"victory":["string",0],
+				"first":["string",1],
+				"serverid":["int",2],
+				"sex":["int",3],
+				"job":["int",4]
+			},
+			"kfboss_member_data":
+			{
+				"name":["string",0],
+				"serverid":["int",1],
+				"damage":["int",2],
+				"guildName":["string",3]
+			},
+			"mail_data": {
+				"handle": ["int", 0],
+				"title": ["string", 1],
+				"times": ["int", 2],
+				"type": ["int", 3],
+				"receive": ["int", 4],
+				"text": ["string", 5],
+				"rewardData": ["*reward_data", 6]
+			},
+			"mail_update_data": {
+				"handle": ["int", 0],
+				"type": ["int", 1],
+				"receive": ["int", 2]
+			},
+			"rank_data_ladder":{
+				"id":["int",0],
+				"player":["string",1],
+				"grade":["int",2],
+				"star":["int",3],
+				"winNum":["int",4],
+				"job":["int",5],
+				"sex":["int",6],
+				"serverId":["int",7],
+				"level":["int",8]
+			},
+			"activity_notice":{
+				"name": ["string", 0],
+				"reward": ["reward_data", 1],
+				"time": ["int", 2]
+			},
+			"attainment_task":{
+				"groupid": ["int", 0],
+				"taskid": ["int", 1],
+				"count": ["int", 2],
+				"status": ["int", 3]
+			},
+			"timelist": {
+				"id": ["int", 0],
+				"time": ["int", 1]
+			},
+			"guildwar_rank_data":
+			{
+				"injure":["int", 0],
+				"injureRank":["int", 1],
+				"holdtracks":["int", 2],
+				"holdtracksRank":["int", 3],
+				"score":["int", 4],
+				"scoreRank":["int", 5],
+				"kill":["int", 6],
+				"killRank":["int", 7]
+			},
+			"guildwar_guild_info":
+			{
+				 "guildId":["int",0],
+				 "guildName":["string",1],
+				 "serverId":["int",2],
+				 "score":["int",3],
+				 "throughNum":["int",4],
+				 "rankData":["guildwar_rank_data",5],
+				 "leaderName":["string",6]
+			},
+			"guildwar_player_data":
+			{
+				"dbid":["int",0],
+				"name":["string",1],
+				"job":["int",2],
+				"sex":["int",3],
+				"serverId":["int",4],
+				"guildName":["string",5],
+				"rankData":["guildwar_rank_data",6]
+			},
+			"guildwar_guard_info":
+			{
+				"name":["string",0],
+				"job":["int",1],
+				"sex":["int",2],
+				"serverId":["int",3],
+				"guildName":["string",4]
+			},
+			"guildwar_king_data":
+			{
+				"bossid":["int",0],
+				"reborntime":["int",1]
+			},
+			"kingreport_person_detail":
+			{
+				"camp":["int",0]
+			},
+			"king_report_share_data":
+			{
+				"rank":["int",0]
+			},
+			"guildwar_report_guild_detail":
+			{
+				"victory":["string",0],
+				"serverid":["int",1]
+			},
+			"map_player":
+			{
+				"id":["int",0],
+				"x":["int",1],
+				"y":["int",2],
+				"name":["string",3],
+				"level":["int",4],
+				"job":["int",5],
+				"sex":["int",6],
+				"power":["int",7],
+				"show":["*int",8],
+				"status":["int",9],
+				"guildid":["int",10],
+				"guildname":["string",11],
+				"serverid":["int",12]
+			},
+			"kfboss_first_info":
+			{
+				"name":["string",0],
+				"serverid":["int",1],
+				"guildid":["int",2],
+				"guildname":["string",3],
+				"damage":["int",4]
+			},
+			"enhance_data":
+			{
+				"no":["int",0],
+				"val":["int",1]
+			},
+			"eight_one_hard_data":
+			{
+				"key1":["int",0],
+				"key2":["int",1]
+			},
+			"eight_one_hard_clear":
+			{
+				"name1":["string",0],
+				"name2":["string",1],
+				"name3":["string",2],
+				"round":["int",3],
+				"time":["int",4]
+			},
+			"totems_data":
+			{
+				"id":["int",0],
+				"lv":["int",1],
+				"upNum":["int",2],
+				"todayNum":["int",3],
+				"todayId":["int",4],
+				"breach":["int",5],
+				"totemsStar":["int",6],
+				"totemsupNum":["int",7],
+				"TotemsQilv":["int",8]
+			},
+			"package_data":
+			{
+				"type":["int",0],
+				"session":["int",1]
+			}
+		}
+	}
+}
